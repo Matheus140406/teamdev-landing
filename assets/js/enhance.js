@@ -9,6 +9,24 @@
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
+  /* ---- scroll suave (Lenis) ---- */
+  var lenis = null;
+  if (!reduced && typeof Lenis !== "undefined") {
+    lenis = new Lenis({ duration: 1.15, easing: function (t) { return 1 - Math.pow(1 - t, 3); }, smoothWheel: true });
+    (function raf(time) { lenis.raf(time); requestAnimationFrame(raf); })();
+    $$('a[href^="#"]').forEach(function (a) {
+      a.addEventListener("click", function (e) {
+        var id = a.getAttribute("href");
+        if (!id || id.length < 2) return;
+        var target;
+        try { target = document.querySelector(id); } catch (err) { target = null; }
+        if (!target) return;
+        e.preventDefault();
+        lenis.scrollTo(target, { offset: -84 });
+      });
+    });
+  }
+
   /* ---- cursor personalizado ---- */
   (function () {
     var dot = $("#cursorDot"), ring = $("#cursorRing");

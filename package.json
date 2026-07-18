@@ -1,0 +1,12 @@
+{
+  "name": "teamdev-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page estática (HTML/CSS/JS) da Dev Team Tech.",
+  "scripts": {
+    "build": "node scripts/build.js"
+  },
+  "devDependencies": {
+    "javascript-obfuscator": "^4.1.1"
+  }
+}

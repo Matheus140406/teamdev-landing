@@ -1,3 +1,10 @@
-User-agent: *
+User-agent: Googlebot
 Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: *
+Disallow: /
+
 Sitemap: https://teamdev.com.br/sitemap.xml

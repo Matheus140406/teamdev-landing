@@ -1,0 +1,10 @@
+# não publicar código-fonte legível nem arquivos de build no deploy
+node_modules
+scripts
+assets/js/app.js
+assets/js/enhance.js
+package.json
+package-lock.json
+README.md
+daniel.jpeg
+.gitignore

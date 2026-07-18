@@ -65,7 +65,7 @@
 }
 
 * { box-sizing: border-box; margin: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 body {
@@ -75,7 +75,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  transition: background 0.4s ease, color 0.4s ease;
+  transition: background 0.15s ease-out, color 0.15s ease-out;
 }
 
 /* aurora de fundo animada */
@@ -257,7 +257,7 @@ a { color: inherit; text-decoration: none; }
 @media (prefers-reduced-motion: reduce) { .ttrack { animation: none; flex-wrap: wrap; width: auto; } }
 
 /* ---------- fundadores ---------- */
-.founders { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-2); margin-top: var(--s-5); }
+.founders { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-2); margin-top: var(--s-5); }
 .founder { position: relative; border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--line-2); box-shadow: var(--el-2); aspect-ratio: 4 / 5; }
 .founder::before { content: ""; position: absolute; inset: 0; z-index: 2; background: linear-gradient(180deg, transparent 40%, rgba(4, 6, 15, 0.85)); }
 .founder img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s var(--ease); }
@@ -311,7 +311,8 @@ a { color: inherit; text-decoration: none; }
 .wa-float svg { width: 22px; height: 22px; }
 
 /* ---------- rodapé ---------- */
-.footer { border-top: 1px solid var(--line); padding-block: var(--s-5) var(--s-4); margin-top: var(--s-6); }
+.footer { border-top: 1px solid var(--line); padding-block: var(--s-5) calc(var(--s-4) + 78px); margin-top: var(--s-6); }
+@media (max-width: 640px) { .footer { padding-bottom: calc(var(--s-4) + 74px); } }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: var(--s-4); }
 .footer p { color: var(--ink-dim); font-size: 14px; margin-top: var(--s-2); max-width: 36ch; }
 .footer h4 { font-family: var(--font-display); font-size: 14px; color: var(--ink-soft); margin-bottom: var(--s-2); }
@@ -956,3 +957,33 @@ html { -webkit-text-size-adjust: 100%; }
 .wa-float { bottom: max(16px, env(safe-area-inset-bottom)); right: max(16px, env(safe-area-inset-right)); }
 
 @media (prefers-reduced-motion: reduce) { .social-row .icon-btn.pop { animation: none; } }
+
+/* ============================================================
+   V17 — troca de tema instantânea + acabamento premium
+   ============================================================ */
+/* troca de tema sem transição (aplicada por ~120ms pelo JS) */
+.theme-snap, .theme-snap *, .theme-snap *::before, .theme-snap *::after { transition: none !important; }
+
+/* seleção de texto com a cor da marca */
+::selection { background: color-mix(in srgb, var(--blue-2) 30%, transparent); color: var(--ink); }
+
+/* scrollbar fina e discreta (WebKit + Firefox) */
+html { scrollbar-width: thin; scrollbar-color: color-mix(in srgb, var(--blue-2) 35%, var(--line)) transparent; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: color-mix(in srgb, var(--blue-2) 28%, var(--line)); border-radius: 99px; border: 2px solid transparent; background-clip: padding-box; }
+::-webkit-scrollbar-thumb:hover { background: color-mix(in srgb, var(--blue-2) 50%, var(--line)); border: 2px solid transparent; background-clip: padding-box; }
+
+/* telas muito pequenas (<= 360px): tipografia e espaçamentos mais justos */
+@media (max-width: 360px) {
+  .wrap { padding-inline: 16px; }
+  .section-title { font-size: clamp(22px, 7.5vw, 28px); }
+  .hero h1 { font-size: clamp(26px, 9vw, 34px); }
+  .btn { padding: 12px 18px; font-size: 14px; }
+  .cred-row { grid-template-columns: repeat(2, 1fr); }
+  .bento-services, .bento-diff { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; }
+  .cookie { left: 10px; right: 10px; bottom: 10px; padding: var(--s-2); }
+  .cookie-actions { flex-wrap: wrap; }
+  .member { padding-top: 96px; }
+}
