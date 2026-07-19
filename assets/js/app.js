@@ -93,7 +93,9 @@
   /* ---------- WhatsApp ---------- */
   function waLink(extra) { return "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(extra || WA_MSG); }
   /* data-wa-msg permite mensagem personalizada por botão (ex.: páginas dos membros) */
-  $$("[data-wa]").forEach(function (a) { a.href = waLink(a.getAttribute("data-wa-msg") || null); a.target = "_blank"; a.rel = "noopener"; });
+  /* anti-tabnabbing: noopener corta o window.opener; noreferrer é o
+     fallback para navegadores antigos e ainda omite o header Referer */
+  $$("[data-wa]").forEach(function (a) { a.href = waLink(a.getAttribute("data-wa-msg") || null); a.target = "_blank"; a.rel = "noopener noreferrer"; });
 
   /* ---------- header + progress ---------- */
   var header = $("#header"), progress = $("#scrollProgress");
@@ -201,7 +203,9 @@
       ok.className = "form-ok";
       ok.textContent = tr("ok.msg", "Recebemos sua mensagem — já estamos te respondendo no WhatsApp.");
       form.insertAdjacentElement("afterend", ok);
-      window.open(waLink("Olá! Sou " + nome.value.trim() + " e quero falar com a Dev Team Tech sobre um projeto."), "_blank", "noopener");
+      /* nome limitado a 80 chars e URL-encoded no waLink — nunca vai para
+         innerHTML, então não há vetor de XSS */
+      window.open(waLink("Olá! Sou " + nome.value.trim().slice(0, 80) + " e quero falar com a Dev Team Tech sobre um projeto."), "_blank", "noopener,noreferrer");
     });
   }
 })();
