@@ -1090,3 +1090,36 @@ html, body { overflow-x: clip; }
   .nav-actions #themeBtn svg { width: 23px; height: 23px; }
   .nav-actions #themeBtn:hover { transform: none; }
 }
+
+/* ============================================================
+   V22 — footer com chips das marcas, entrada com blur,
+   mock "pegável" (PC e celular)
+   ============================================================ */
+
+/* ---- ícones do footer: chips sólidos com a cor de cada marca ---- */
+.footer .social-row .icon-btn { width: 48px; height: 48px; border: 0; box-shadow: 0 8px 20px -10px rgba(0, 0, 0, 0.55); }
+.footer .social-row .icon-btn svg { width: 24px; height: 24px; }
+.footer .social-row .social-ig { background: linear-gradient(45deg, #f9ce34, #ee2a7b 52%, #6228d7); }
+.footer .social-row .social-ig svg [stroke] { stroke: #fff; }
+.footer .social-row .social-ig svg circle[fill] { fill: #fff; }
+.footer .social-row .social-wa { background: #25d366; }
+.footer .social-row .social-wa svg { fill: #fff; }
+.footer .social-row .social-mail { background: linear-gradient(135deg, var(--blue), var(--cyan)); color: #fff; }
+.footer .social-row .social-gh { background: #171b21; color: #fff; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.16), 0 8px 20px -10px rgba(0, 0, 0, 0.55); }
+.footer .social-row .social-gh svg { color: #fff; }
+.footer .social-row .icon-btn:hover { transform: translateY(-4px) scale(1.07); }
+.footer .social-row .social-ig:hover { background: linear-gradient(45deg, #f9ce34, #ee2a7b 52%, #6228d7); color: #fff; box-shadow: 0 14px 28px -10px rgba(238, 42, 123, 0.55); }
+.footer .social-row .social-wa:hover { background: #25d366; color: #fff; box-shadow: 0 14px 28px -10px rgba(37, 211, 102, 0.55); }
+.footer .social-row .social-mail:hover { background: linear-gradient(135deg, var(--blue), var(--cyan)); color: #fff; box-shadow: 0 14px 28px -10px rgba(56, 189, 248, 0.55); }
+.footer .social-row .social-gh:hover { background: #171b21; color: #fff; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3), 0 14px 28px -10px rgba(120, 150, 255, 0.4); }
+
+/* ---- entrada das seções com leve blur + escala (mais "premium") ---- */
+.reveal { transform: translateY(26px) scale(0.985); filter: blur(10px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease), filter 0.8s var(--ease); }
+.reveal.in { filter: blur(0); }
+.stagger > * { filter: blur(7px); transition: opacity 0.6s var(--ease), transform 0.6s var(--ease), filter 0.6s var(--ease); }
+.stagger.in > * { filter: blur(0); }
+@media (prefers-reduced-motion: reduce) { .reveal, .stagger > * { filter: none; transform: none; transition: none; } }
+
+/* ---- mock do hero: dá pra "pegar" e girar ---- */
+.mock { cursor: grab; user-select: none; -webkit-user-select: none; touch-action: pan-y; }
+.mock.grabbed { cursor: grabbing; }
