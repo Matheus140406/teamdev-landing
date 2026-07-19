@@ -14,7 +14,7 @@
   if (!reduced && typeof Lenis !== "undefined") {
     /* duração maior + easing mais longo = descida bem mais suave;
        syncTouch estende a suavização para o toque (celular) */
-    lenis = new Lenis({ duration: 1.6, easing: function (t) { return 1 - Math.pow(1 - t, 4); }, smoothWheel: true, syncTouch: true });
+    lenis = new Lenis({ duration: 1.75, easing: function (t) { return 1 - Math.pow(1 - t, 4); }, smoothWheel: true, wheelMultiplier: 0.95, syncTouch: true });
     (function raf(time) { lenis.raf(time); requestAnimationFrame(raf); })();
     $$('a[href^="#"]').forEach(function (a) {
       a.addEventListener("click", function (e) {

@@ -8,3 +8,8 @@ package-lock.json
 README.md
 daniel.jpeg
 .gitignore
+assets/css/styles.css
+assets/img/matheus.png
+assets/img/eduardo.png
+assets/img/daniel.png
+assets/img/hero-art.png
