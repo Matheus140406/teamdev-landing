@@ -1068,3 +1068,17 @@ html, body { overflow-x: clip; }
   .mock-float { left: 10px; right: auto; bottom: 10px; }
   .mock-body { padding-bottom: calc(var(--s-3) + 34px); }
 }
+
+/* ============================================================
+   V21 — botão de tema (sol/lua) mais bonito
+   ============================================================ */
+/* pontas arredondadas deixam o sol/lua com traço suave em vez de "engrenagem" */
+#themeBtn svg, .drawer-theme svg { stroke-linecap: round; stroke-linejoin: round; }
+#themeBtn svg { width: 20px; height: 20px; }
+#themeBtn { color: var(--ink); }
+/* no celular perde a borda de círculo — fica no mesmo estilo do menu ☰ */
+@media (max-width: 980px) {
+  .nav-actions #themeBtn { border: 0; background: transparent; }
+  .nav-actions #themeBtn svg { width: 23px; height: 23px; }
+  .nav-actions #themeBtn:hover { transform: none; }
+}

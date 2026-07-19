@@ -2067,7 +2067,8 @@
 
   /* ---------- WhatsApp ---------- */
   function waLink(extra) { return "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(extra || WA_MSG); }
-  $$("[data-wa]").forEach(function (a) { a.href = waLink(); a.target = "_blank"; a.rel = "noopener"; });
+  /* data-wa-msg permite mensagem personalizada por botão (ex.: páginas dos membros) */
+  $$("[data-wa]").forEach(function (a) { a.href = waLink(a.getAttribute("data-wa-msg") || null); a.target = "_blank"; a.rel = "noopener"; });
 
   /* ---------- header + progress ---------- */
   var header = $("#header"), progress = $("#scrollProgress");
