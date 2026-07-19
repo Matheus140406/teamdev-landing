@@ -12,7 +12,9 @@
   /* ---- scroll suave (Lenis) ---- */
   var lenis = null;
   if (!reduced && typeof Lenis !== "undefined") {
-    lenis = new Lenis({ duration: 1.15, easing: function (t) { return 1 - Math.pow(1 - t, 3); }, smoothWheel: true });
+    /* duração maior + easing mais longo = descida bem mais suave;
+       syncTouch estende a suavização para o toque (celular) */
+    lenis = new Lenis({ duration: 1.6, easing: function (t) { return 1 - Math.pow(1 - t, 4); }, smoothWheel: true, syncTouch: true });
     (function raf(time) { lenis.raf(time); requestAnimationFrame(raf); })();
     $$('a[href^="#"]').forEach(function (a) {
       a.addEventListener("click", function (e) {
@@ -22,7 +24,7 @@
         try { target = document.querySelector(id); } catch (err) { target = null; }
         if (!target) return;
         e.preventDefault();
-        lenis.scrollTo(target, { offset: -84 });
+        lenis.scrollTo(target, { offset: -84, duration: 1.4 });
       });
     });
   }
@@ -218,6 +220,44 @@
       el.addEventListener("mouseleave", function () { el.style.transform = ""; });
     });
   }
+
+  /* ---- mock do hero interativo: arraste para girar (PC e celular) ---- */
+  (function () {
+    var mock = $("#heroMock"); if (!mock || reduced) return;
+    var coarse = window.matchMedia("(pointer: coarse)").matches;
+    /* ângulo de descanso: no desktop o mock vive inclinado; no celular, reto */
+    var baseX = coarse ? 0 : 5, baseY = coarse ? 0 : -9;
+    var dragging = false, sx = 0, sy = 0, tx = baseX, ty = baseY, cx = baseX, cy = baseY, raf = null;
+    function loop() {
+      cx += (tx - cx) * 0.16; cy += (ty - cy) * 0.16;
+      mock.style.transform = "perspective(1100px) rotateX(" + cx.toFixed(2) + "deg) rotateY(" + cy.toFixed(2) + "deg)";
+      if (dragging || Math.abs(tx - cx) > 0.25 || Math.abs(ty - cy) > 0.25) { raf = requestAnimationFrame(loop); }
+      else { raf = null; cx = tx; cy = ty; mock.classList.remove("grabbed"); if (!coarse) mock.style.transform = ""; }
+    }
+    function kick() { if (!raf) raf = requestAnimationFrame(loop); }
+    mock.addEventListener("pointerdown", function (e) {
+      dragging = true; sx = e.clientX; sy = e.clientY;
+      mock.classList.add("grabbed");
+      try { mock.setPointerCapture(e.pointerId); } catch (err) {}
+      if (lenis) lenis.stop(); /* segurando o mock, a página não rola junto */
+      kick();
+    });
+    mock.addEventListener("pointermove", function (e) {
+      if (!dragging) return;
+      ty = Math.max(-20, Math.min(20, baseY + (e.clientX - sx) * 0.18));
+      tx = Math.max(-16, Math.min(16, baseX - (e.clientY - sy) * 0.18));
+    });
+    function release() {
+      if (!dragging) return;
+      dragging = false; tx = baseX; ty = baseY; /* volta com efeito de mola */
+      if (lenis) lenis.start();
+      kick();
+    }
+    mock.addEventListener("pointerup", release);
+    mock.addEventListener("pointercancel", release);
+    /* impede que o gesto no mock role a página por baixo */
+    mock.addEventListener("touchmove", function (e) { if (dragging) e.stopPropagation(); }, { passive: true });
+  })();
 
   /* ---- page-enter (transição app-like nas páginas internas) ---- */
   var main = $("main.member"); if (main && !reduced) main.classList.add("page-enter");

@@ -2108,10 +2108,11 @@
   /* ---------- parallax (mouse + scroll) ---------- */
   var scene = $("#pxScene"), mock = $("#heroMock");
   var coarseP = window.matchMedia("(pointer: coarse)").matches;
-  if (scene && !reduced && !coarseP) {
+  if (scene && !reduced) {
     var layers = $$(".px-layer", scene);
     var mx = 0, my = 0, tmx = 0, tmy = 0, sy = 0;
-    window.addEventListener("mousemove", function (e) {
+    /* mouse só no desktop; o parallax de scroll roda também no celular */
+    if (!coarseP) window.addEventListener("mousemove", function (e) {
       tmx = (e.clientX / window.innerWidth - 0.5) * 2;
       tmy = (e.clientY / window.innerHeight - 0.5) * 2;
     });
@@ -2122,7 +2123,8 @@
         var d = parseFloat(l.getAttribute("data-depth")) || 0.2;
         l.style.transform = "translate3d(" + (mx * d * 24) + "px," + (my * d * 24 + sy * d * 0.18) + "px,0)";
       });
-      if (mock) mock.style.transform = "rotateY(" + (-9 + mx * 4) + "deg) rotateX(" + (5 - my * 4) + "deg)";
+      /* enquanto o usuário "segura" o mock, quem manda é o drag (enhance.js) */
+      if (mock && !coarseP && !mock.classList.contains("grabbed")) mock.style.transform = "rotateY(" + (-9 + mx * 4) + "deg) rotateX(" + (5 - my * 4) + "deg)";
       requestAnimationFrame(loop);
     })();
   }
