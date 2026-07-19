@@ -2024,19 +2024,21 @@
     });
     document.documentElement.setAttribute("lang", lang === "pt" ? "pt-BR" : lang);
     document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
-    var sel = $("#langSelect");
-    if (sel && sel.value !== lang) sel.value = lang;
+    /* mantém os DOIS seletores (header e menu lateral) em sincronia */
+    $$("#langSelect, #langSelectDrawer").forEach(function (sel) {
+      if (sel.value !== lang) sel.value = lang;
+    });
     try { localStorage.setItem(LANG_STORE, lang); } catch (e) {}
   }
   cachePT();
   var startLang = "pt";
   try { startLang = localStorage.getItem(LANG_STORE) || "pt"; } catch (e) {}
   if (I18N[startLang]) applyLang(startLang);
-  var langSelect = $("#langSelect");
-  if (langSelect) {
-    langSelect.value = startLang;
-    langSelect.addEventListener("change", function () { applyLang(langSelect.value); });
-  }
+  /* o seletor do menu lateral (mobile) também precisa aplicar o idioma */
+  $$("#langSelect, #langSelectDrawer").forEach(function (sel) {
+    sel.value = startLang;
+    sel.addEventListener("change", function () { applyLang(sel.value); });
+  });
 
   /* ---------- tema ---------- */
   var THEME_STORE = "tdv-theme";
