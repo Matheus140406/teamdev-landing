@@ -2024,19 +2024,21 @@
     });
     document.documentElement.setAttribute("lang", lang === "pt" ? "pt-BR" : lang);
     document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
-    var sel = $("#langSelect");
-    if (sel && sel.value !== lang) sel.value = lang;
+    /* mantém os DOIS seletores (header e menu lateral) em sincronia */
+    $$("#langSelect, #langSelectDrawer").forEach(function (sel) {
+      if (sel.value !== lang) sel.value = lang;
+    });
     try { localStorage.setItem(LANG_STORE, lang); } catch (e) {}
   }
   cachePT();
   var startLang = "pt";
   try { startLang = localStorage.getItem(LANG_STORE) || "pt"; } catch (e) {}
   if (I18N[startLang]) applyLang(startLang);
-  var langSelect = $("#langSelect");
-  if (langSelect) {
-    langSelect.value = startLang;
-    langSelect.addEventListener("change", function () { applyLang(langSelect.value); });
-  }
+  /* o seletor do menu lateral (mobile) também precisa aplicar o idioma */
+  $$("#langSelect, #langSelectDrawer").forEach(function (sel) {
+    sel.value = startLang;
+    sel.addEventListener("change", function () { applyLang(sel.value); });
+  });
 
   /* ---------- tema ---------- */
   var THEME_STORE = "tdv-theme";
@@ -2047,6 +2049,9 @@
     document.documentElement.setAttribute("data-theme", tm);
     $$(".i-moon").forEach(function (m) { m.style.display = tm === "light" ? "none" : ""; });
     $$(".i-sun").forEach(function (s) { s.style.display = tm === "light" ? "" : "none"; });
+    /* barra do navegador acompanha o tema (mobile) */
+    var mtc = document.querySelector('meta[name="theme-color"]');
+    if (mtc) mtc.setAttribute("content", tm === "light" ? "#f5f8fd" : "#04060f");
     try { localStorage.setItem(THEME_STORE, tm); } catch (e) {}
     clearTimeout(themeSnapT);
     themeSnapT = setTimeout(function () { document.documentElement.classList.remove("theme-snap"); }, 120);
@@ -2062,7 +2067,8 @@
 
   /* ---------- WhatsApp ---------- */
   function waLink(extra) { return "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(extra || WA_MSG); }
-  $$("[data-wa]").forEach(function (a) { a.href = waLink(); a.target = "_blank"; a.rel = "noopener"; });
+  /* data-wa-msg permite mensagem personalizada por botão (ex.: páginas dos membros) */
+  $$("[data-wa]").forEach(function (a) { a.href = waLink(a.getAttribute("data-wa-msg") || null); a.target = "_blank"; a.rel = "noopener"; });
 
   /* ---------- header + progress ---------- */
   var header = $("#header"), progress = $("#scrollProgress");
