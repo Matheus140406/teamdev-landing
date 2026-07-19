@@ -1076,6 +1076,14 @@ html, body { overflow-x: clip; }
 #themeBtn svg, .drawer-theme svg { stroke-linecap: round; stroke-linejoin: round; }
 #themeBtn svg { width: 20px; height: 20px; }
 #themeBtn { color: var(--ink); }
+/* cada modo tem a própria cor: lua lilás no escuro, sol dourado no claro —
+   ao tocar, o ícone troca e a cor muda junto */
+#themeBtn .i-moon, .drawer-theme .i-moon { color: #a5b4fc; }
+#themeBtn .i-sun, .drawer-theme .i-sun { color: #e59f13; }
+[data-theme="light"] #themeBtn .i-moon, [data-theme="light"] .drawer-theme .i-moon { color: #6d7ce8; }
+/* feedback de toque: o ícone "gira" e encolhe enquanto o dedo está nele */
+#themeBtn svg, .drawer-theme svg { transition: transform 0.25s var(--ease); }
+#themeBtn:active svg, .drawer-theme:active svg { transform: scale(0.8) rotate(-40deg); }
 /* no celular perde a borda de círculo — fica no mesmo estilo do menu ☰ */
 @media (max-width: 980px) {
   .nav-actions #themeBtn { border: 0; background: transparent; }
