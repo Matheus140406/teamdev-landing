@@ -2047,6 +2047,9 @@
     document.documentElement.setAttribute("data-theme", tm);
     $$(".i-moon").forEach(function (m) { m.style.display = tm === "light" ? "none" : ""; });
     $$(".i-sun").forEach(function (s) { s.style.display = tm === "light" ? "" : "none"; });
+    /* barra do navegador acompanha o tema (mobile) */
+    var mtc = document.querySelector('meta[name="theme-color"]');
+    if (mtc) mtc.setAttribute("content", tm === "light" ? "#f5f8fd" : "#04060f");
     try { localStorage.setItem(THEME_STORE, tm); } catch (e) {}
     clearTimeout(themeSnapT);
     themeSnapT = setTimeout(function () { document.documentElement.classList.remove("theme-snap"); }, 120);
