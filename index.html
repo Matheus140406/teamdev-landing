@@ -6,7 +6,7 @@
 <!-- Segurança: protege dados/navegação sem afetar a leitura pelo Google -->
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self'; connect-src 'self'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self'; connect-src 'self'; upgrade-insecure-requests" />
 <meta name="format-detection" content="telephone=no" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
 <title>Dev Team Tech — Sites e sistemas que geram clientes</title>
@@ -19,9 +19,12 @@
 <meta property="og:locale" content="pt_BR" />
 <meta property="og:title" content="Dev Team Tech — Sites e sistemas que geram clientes" />
 <meta property="og:description" content="Design que parece ter custado 5x mais, entregue no prazo combinado, com transparência. Estratégia, performance e suporte real." />
-<meta property="og:image" content="assets/img/og.png" />
+<meta property="og:image" content="https://teamdev.com.br/assets/img/og.png" />
 <meta property="og:url" content="https://teamdev.com.br/" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Dev Team Tech — Sites e sistemas que geram clientes" />
+<meta name="twitter:description" content="Design premium, prazo definido e suporte real depois do ar." />
+<meta name="twitter:image" content="https://teamdev.com.br/assets/img/og.png" />
 
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png" />
@@ -31,8 +34,8 @@
 <link rel="manifest" href="site.webmanifest" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/css/styles.css" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/styles.min.css" />
 
 <script type="application/ld+json">
 { "@context": "https://schema.org", "@type": "Organization", "name": "Dev Team Tech",
@@ -53,7 +56,7 @@
 <script type="application/ld+json">
 { "@context": "https://schema.org", "@type": "ProfessionalService", "name": "Dev Team Tech",
   "image": "https://teamdev.com.br/assets/img/og.png", "url": "https://teamdev.com.br/",
-  "telephone": "+55-61-99999-9999", "priceRange": "$$",
+  "priceRange": "$$",
   "address": { "@type": "PostalAddress", "addressCountry": "BR", "addressRegion": "DF" },
   "areaServed": "BR", "serviceType": ["Landing Pages","Sites Institucionais","Sistemas Web","Automações","SEO"] }
 </script>
@@ -65,6 +68,7 @@
 </script>
 </head>
 <body class="has-cursor">
+<a class="skip-link" href="#topo">Pular para o conteúdo</a>
 <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
 <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
 <div class="scroll-progress" id="scrollProgress"></div>
@@ -431,6 +435,31 @@
   </div>
 </section>
 
+<!-- SUPORTE & MANUTENÇÃO -->
+<section class="section" id="suporte">
+  <span class="sec-orb c o1" aria-hidden="true"></span>
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" data-i18n="sup.eyebrow">Suporte &amp; manutenção</span>
+      <h2 class="section-title" data-i18n="sup.title">Entregamos — e continuamos por perto.</h2>
+      <p class="section-sub" data-i18n="sup.sub">Transparência total sobre o que está incluído no seu projeto e o que é cobrado à parte. Sem surpresa, sem letra miúda.</p>
+    </div>
+    <div class="support-card reveal">
+      <div class="support-head">
+        <span class="support-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V5z"/><path d="m9 12 2 2 4-4"/></svg> <span data-i18n="sup.badge">15 dias de suporte gratuito</span></span>
+        <p data-i18n="sup.lead">Todo projeto inclui <b>15 dias de suporte gratuito</b> após a entrega — ajustes, correções e acompanhamento para o seu site decolar com segurança.</p>
+      </div>
+      <ul class="support-list">
+        <li><span class="s-ic ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 12 5 5L20 7"/></svg></span><span data-i18n="sup.f1"><b>Correções e ajustes</b> nos primeiros 15 dias — por nossa conta.</span></li>
+        <li><span class="s-ic in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4.5 4.5 0 0 0-6 6L3 18v3h3l5.7-5.7a4.5 4.5 0 0 0 6-6L14 13l-3-3z"/></svg></span><span data-i18n="sup.f2"><b>Manutenções</b> após esse período são cobradas à parte, sempre com orçamento aprovado antes.</span></li>
+        <li><span class="s-ic in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span><span data-i18n="sup.f3"><b>Novas funcionalidades</b> e alterações fora do escopo original recebem um novo orçamento, por escrito.</span></li>
+        <li><span class="s-ic in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg></span><span data-i18n="sup.f4"><b>Atualizações técnicas importantes</b> que impactem o funcionamento do site são comunicadas previamente a você.</span></li>
+      </ul>
+      <p class="support-note" data-i18n="sup.note">Você sabe exatamente o que está incluído — e decide o que contratar depois.</p>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section class="section" id="faq">
   <div class="wrap">
@@ -457,6 +486,11 @@
       <span class="eyebrow" data-i18n="sec.eyebrow">Segurança &amp; conformidade</span>
       <h2 class="section-title" data-i18n="sec.title">Seus dados — e os do seu cliente — tratados com responsabilidade.</h2>
       <p class="section-sub" data-i18n="sec.sub">Privacidade e segurança não são detalhe: são parte de como construímos cada projeto.</p>
+      <div class="sec-trust reveal" aria-label="Selos de conformidade">
+        <span class="trust-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V5z"/><path d="m9 12 2 2 4-4"/></svg> <span data-i18n="sec.t1">LGPD · Lei 13.709/2018</span></span>
+        <span class="trust-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> <span data-i18n="sec.t2">Criptografia HTTPS/TLS</span></span>
+        <span class="trust-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 1 1-4.9-7.6"/><path d="m9 11 3 3L22 4"/></svg> <span data-i18n="sec.t3">Consentimento de cookies</span></span>
+      </div>
     </div>
     <div class="bento bento-diff stagger reveal">
       <article class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V5z"/><path d="m9 12 2 2 4-4"/></svg></div><h3 data-i18n="sc.1.t">Conformidade com a LGPD</h3><p data-i18n="sc.1.d">Coleta com finalidade clara e base legal — do jeito que a lei pede.</p></article>
@@ -516,14 +550,15 @@
           </a>
         </div></div>
       <div>
-        <h4 data-i18n="foot.nav">Navegação</h4>
+        <h3 data-i18n="foot.nav">Navegação</h3>
         <a href="#servicos" data-i18n="nav.services">Serviços</a>
         <a href="#diferenciais" data-i18n="nav.diff">Diferenciais</a>
         <a href="#processo" data-i18n="nav.process">Processo</a>
+        <a href="#suporte" data-i18n="sup.eyebrow">Suporte &amp; manutenção</a>
         <a href="#faq" data-i18n="nav.faq">FAQ</a>
       </div>
       <div>
-        <h4 data-i18n="foot.contact">Contato</h4>
+        <h3 data-i18n="foot.contact">Contato</h3>
         <a data-wa href="#">WhatsApp</a>
         <a href="mailto:devteam2026tech@gmail.com">devteam2026tech@gmail.com</a>
         <a href="privacidade.html" target="_blank" rel="noopener" data-i18n="foot.privacy">Política de Privacidade</a>
