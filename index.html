@@ -6,7 +6,7 @@
 <!-- Segurança: protege dados/navegação sem afetar a leitura pelo Google -->
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self'; connect-src 'self'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; upgrade-insecure-requests" />
 <meta name="format-detection" content="telephone=no" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
 <title>Dev Team Tech — Sites e sistemas que geram clientes</title>
@@ -32,9 +32,8 @@
 <link rel="shortcut icon" href="assets/img/favicon.ico" />
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
 <link rel="manifest" href="site.webmanifest" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+<link rel="preload" href="assets/fonts/spacegrotesk-700-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="assets/css/styles.min.css" />
 
 <script type="application/ld+json">
