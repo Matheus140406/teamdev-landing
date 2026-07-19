@@ -255,8 +255,10 @@
     }
     mock.addEventListener("pointerup", release);
     mock.addEventListener("pointercancel", release);
-    /* impede que o gesto no mock role a página por baixo */
-    mock.addEventListener("touchmove", function (e) { if (dragging) e.stopPropagation(); }, { passive: true });
+    /* impede que o gesto no mock role a página por baixo — preventDefault
+       (passive:false) cobre também navegadores embutidos (Instagram etc.)
+       onde só stopPropagation não bastava */
+    mock.addEventListener("touchmove", function (e) { if (dragging) { e.preventDefault(); e.stopPropagation(); } }, { passive: false });
   })();
 
   /* ---- page-enter (transição app-like nas páginas internas) ---- */

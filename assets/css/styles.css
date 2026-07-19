@@ -1139,6 +1139,14 @@ html, body { overflow-x: clip; }
 .mock { cursor: grab; user-select: none; -webkit-user-select: none; touch-action: pan-y; }
 .mock.grabbed { cursor: grabbing; }
 
+/* mock "vivo": flutua devagar quando ninguém está segurando
+   (a animação fica no PAI para não brigar com o transform inline
+   que o parallax/arrasto aplicam no .mock) */
+@keyframes mockFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+.hero-visual { animation: mockFloat 7s ease-in-out 1.2s infinite; }
+.hero-visual:has(.mock.grabbed) { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) { .hero-visual { animation: none; } }
+
 /* ============================================================
    V23 — suporte & manutenção, LGPD premium, acessibilidade
    e microinterações
