@@ -51,7 +51,7 @@
   --grad: linear-gradient(95deg, #a855f7, #6366f1 45%, #38bdf8);
   /* versão clara do gradiente, só para texto recortado (legível no fundo escuro) */
   --grad-text: linear-gradient(95deg, #c084fc, #8da2ff 45%, #4cc3ff);
-  --glow: rgba(124, 80, 237, 0.5);
+  --glow: rgba(124, 80, 237, 0.34);
 
   /* espaçamento base-8 */
   --s-1: 8px; --s-2: 16px; --s-3: 24px; --s-4: 32px;
@@ -60,8 +60,8 @@
   --r-sm: 8px; --r: 16px; --r-lg: 24px; --r-pill: 999px;
 
   --el-1: 0 4px 16px -8px rgba(0, 0, 0, 0.6);
-  --el-2: 0 16px 40px -20px rgba(29, 78, 216, 0.4), 0 6px 18px -10px rgba(0, 0, 0, 0.6);
-  --el-3: 0 40px 80px -32px rgba(29, 78, 216, 0.5), 0 18px 40px -20px rgba(0, 0, 0, 0.8);
+  --el-2: 0 16px 40px -22px rgba(29, 78, 216, 0.3), 0 6px 18px -10px rgba(0, 0, 0, 0.55);
+  --el-3: 0 40px 80px -34px rgba(29, 78, 216, 0.38), 0 18px 40px -22px rgba(0, 0, 0, 0.7);
 
   --font-display: "Space Grotesk", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
@@ -109,11 +109,11 @@ body::before {
   position: fixed; inset: -20%;
   z-index: -2;
   background:
-    radial-gradient(38% 34% at 12% 6%, rgba(124, 58, 237, 0.26), transparent 60%),
-    radial-gradient(34% 30% at 84% 10%, rgba(56, 189, 248, 0.16), transparent 58%),
-    radial-gradient(40% 36% at 96% 58%, rgba(99, 102, 241, 0.18), transparent 60%),
-    radial-gradient(48% 42% at 40% 108%, rgba(168, 85, 247, 0.18), transparent 60%);
-  filter: saturate(120%);
+    radial-gradient(38% 34% at 12% 6%, rgba(124, 58, 237, 0.2), transparent 60%),
+    radial-gradient(34% 30% at 84% 10%, rgba(56, 189, 248, 0.13), transparent 58%),
+    radial-gradient(40% 36% at 96% 58%, rgba(99, 102, 241, 0.14), transparent 60%),
+    radial-gradient(48% 42% at 40% 108%, rgba(168, 85, 247, 0.14), transparent 60%);
+  filter: saturate(110%);
   animation: aurora 22s ease-in-out infinite alternate;
   pointer-events: none;
 }
@@ -485,7 +485,7 @@ body::after { content: ""; position: fixed; inset: 0; z-index: -1; pointer-event
 .tl-dot svg { width: 12px; height: 12px; color: var(--blue-2); }
 .tl-item h3 { font-family: var(--font-display); font-size: 18px; }
 .tl-item p { color: var(--ink-soft); font-size: 14px; margin-top: 4px; max-width: 56ch; }
-.tl-item .n { font-family: var(--font-mono); font-size: 11px; color: var(--blue-2); letter-spacing: 0.2em; }
+.tl-item .n { font-family: var(--font-mono); font-size: 11px; color: var(--blue-2); letter-spacing: 0.08em; opacity: 0.75; }
 
 /* ---- off-canvas mobile ---- */
 .drawer-backdrop { position: fixed; inset: 0; z-index: 88; background: rgba(2, 4, 10, 0.55); backdrop-filter: blur(6px); opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease; }
