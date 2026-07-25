@@ -1,49 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1560 730" width="1560" height="730">
   <defs>
-    <linearGradient id="ibg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0c1424"/>
-      <stop offset="1" stop-color="#060a14"/>
+    <linearGradient id="imbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1f3d"/>
+      <stop offset="1" stop-color="#0a1730"/>
     </linearGradient>
-    <linearGradient id="ibtn" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#f59e0b"/>
-      <stop offset="1" stop-color="#d97706"/>
+    <linearGradient id="imgold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f0c14b"/>
+      <stop offset="1" stop-color="#d9a520"/>
     </linearGradient>
   </defs>
-  <rect width="960" height="600" fill="url(#ibg)"/>
-  <circle cx="46" cy="42" r="16" fill="#f59e0b"/>
-  <text x="74" y="50" font-family="Arial" font-size="20" fill="#f1f5fb" font-weight="700">Imobiliária</text>
-  <g font-family="Arial" font-size="14" fill="#c9d3e6">
-    <text x="650" y="46">Comprar</text>
-    <text x="730" y="46">Alugar</text>
-    <text x="800" y="46">Anunciar</text>
+  <rect width="1560" height="730" fill="url(#imbg)"/>
+
+  <rect x="60" y="26" width="38" height="38" rx="6" fill="url(#imgold)"/>
+  <text x="70" y="52" font-family="Georgia, serif" font-size="15" fill="#0f1f3d" font-weight="700">M&amp;Y</text>
+  <text x="112" y="52" font-family="Georgia, serif" font-size="22" fill="#ffffff" font-weight="700">Imobiliária <tspan fill="url(#imgold)" font-style="italic">M&amp;Y</tspan></text>
+
+  <g font-family="Arial" font-size="14" fill="#dbe2f0">
+    <text x="1140" y="46">Sobre</text>
+    <text x="1224" y="46">Serviços</text>
+    <text x="1320" y="46">Imóveis</text>
   </g>
-  <rect x="60" y="90" width="840" height="60" rx="14" fill="#101a2c" stroke="#243352"/>
-  <text x="86" y="126" font-family="Arial" font-size="14" fill="#8391ab">Buscar por cidade, bairro ou código do imóvel...</text>
-  <rect x="800" y="100" width="80" height="40" rx="10" fill="url(#ibtn)"/>
-  <text x="820" y="125" font-family="Arial" font-size="13" fill="#1a1204" font-weight="700">Buscar</text>
+  <rect x="1394" y="24" width="120" height="42" rx="8" fill="url(#imgold)"/>
+  <text x="1415" y="51" font-family="Arial" font-size="14" fill="#0f1f3d" font-weight="700">Fale Conosco</text>
 
-  <g>
-    <rect x="60" y="180" width="270" height="200" rx="16" fill="#101a2c" stroke="#243352"/>
-    <rect x="60" y="180" width="270" height="120" rx="16" fill="#1b2c4a"/>
-    <path d="M110 260l40-40 40 40 30-25 40 30" stroke="#3b5788" stroke-width="4" fill="none"/>
-    <text x="80" y="322" font-family="Arial" font-size="14" fill="#f1f5fb" font-weight="700">Apartamento · Asa Sul</text>
-    <text x="80" y="344" font-family="Arial" font-size="13" fill="#f59e0b" font-weight="700">R$ 620.000</text>
-    <text x="80" y="364" font-family="Arial" font-size="12" fill="#8391ab">3 quartos · 2 vagas · 98m²</text>
+  <rect x="60" y="126" width="360" height="34" rx="17" fill="none" stroke="#3a4f78"/>
+  <circle cx="80" cy="143" r="4" fill="#f0c14b"/>
+  <text x="96" y="148" font-family="Arial" font-size="12" fill="#c7d0e6" letter-spacing="1">IMOBILIÁRIA M&amp;Y · ÁGUAS LINDAS DE GOIÁS</text>
 
-    <rect x="350" y="180" width="270" height="200" rx="16" fill="#101a2c" stroke="#243352"/>
-    <rect x="350" y="180" width="270" height="120" rx="16" fill="#1b2c4a"/>
-    <path d="M400 260l40-40 40 40 30-25 40 30" stroke="#3b5788" stroke-width="4" fill="none"/>
-    <text x="370" y="322" font-family="Arial" font-size="14" fill="#f1f5fb" font-weight="700">Casa · Lago Norte</text>
-    <text x="370" y="344" font-family="Arial" font-size="13" fill="#f59e0b" font-weight="700">R$ 1.450.000</text>
-    <text x="370" y="364" font-family="Arial" font-size="12" fill="#8391ab">4 quartos · 4 vagas · 320m²</text>
+  <text x="58" y="240" font-family="Georgia, serif" font-size="54" fill="#ffffff" font-weight="700">Realize o Sonho</text>
+  <text x="58" y="302" font-family="Georgia, serif" font-size="54" fill="#ffffff" font-weight="700">da <tspan fill="url(#imgold)" font-style="italic">Casa</tspan></text>
+  <text x="58" y="364" font-family="Georgia, serif" font-size="54" fill="url(#imgold)" font-weight="700" font-style="italic">Própria</text>
 
-    <rect x="640" y="180" width="260" height="200" rx="16" fill="#101a2c" stroke="#243352"/>
-    <rect x="640" y="180" width="260" height="120" rx="16" fill="#1b2c4a"/>
-    <path d="M690 260l40-40 40 40 30-25 30 30" stroke="#3b5788" stroke-width="4" fill="none"/>
-    <text x="660" y="322" font-family="Arial" font-size="14" fill="#f1f5fb" font-weight="700">Cobertura · Sudoeste</text>
-    <text x="660" y="344" font-family="Arial" font-size="13" fill="#f59e0b" font-weight="700">R$ 980.000</text>
-    <text x="660" y="364" font-family="Arial" font-size="12" fill="#8391ab">3 quartos · 3 vagas · 210m²</text>
+  <text x="60" y="420" font-family="Arial" font-size="16" fill="#c7d0e6">Conduzimos cada etapa da conquista do seu imóvel com a</text>
+  <text x="60" y="446" font-family="Arial" font-size="16" fill="#c7d0e6">segurança, a transparência e a atenção que um patrimônio dessa</text>
+  <text x="60" y="472" font-family="Arial" font-size="16" fill="#c7d0e6">importância merece.</text>
+
+  <rect x="60" y="514" width="150" height="50" rx="8" fill="none" stroke="#5a6f98"/>
+  <text x="90" y="545" font-family="Arial" font-size="15" fill="#ffffff" font-weight="700">Ver Imóveis</text>
+
+  <text x="1300" y="558" font-family="Arial" font-size="12" fill="#7c8bab" letter-spacing="3">ROLE</text>
+  <line x1="1318" y1="574" x2="1318" y2="626" stroke="#f0c14b" stroke-width="2"/>
+
+  <g opacity="0.5">
+    <rect x="900" y="150" width="560" height="360" rx="18" fill="#132648"/>
+    <path d="M960 420l120-120 90 90 100-100 130 130" stroke="#2a3f6a" stroke-width="5" fill="none"/>
   </g>
-
-  <text x="60" y="440" font-family="Arial" font-size="13" fill="#8391ab">+ 320 imóveis disponíveis em todo o Distrito Federal</text>
 </svg>
