@@ -1,60 +1,63 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
   <defs>
-    <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#241208"/>
-      <stop offset="1" stop-color="#120a06"/>
-    </linearGradient>
-    <linearGradient id="card1" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#3a2213"/>
-      <stop offset="1" stop-color="#2a180d"/>
-    </linearGradient>
-    <linearGradient id="btn1" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#e8a33d"/>
-      <stop offset="1" stop-color="#c9791f"/>
+    <radialGradient id="cwood" cx="30%" cy="60%" r="80%">
+      <stop offset="0" stop-color="#7a5636"/>
+      <stop offset="1" stop-color="#3f2a18"/>
+    </radialGradient>
+    <linearGradient id="coverlay" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.55"/>
     </linearGradient>
   </defs>
-  <rect width="960" height="600" fill="url(#bg1)"/>
-  <rect x="0" y="0" width="960" height="84" fill="#1a0f08" opacity="0.9"/>
-  <circle cx="48" cy="42" r="16" fill="#e8a33d"/>
-  <text x="76" y="50" font-family="Georgia, serif" font-size="24" fill="#f4e3c9" font-weight="700">Aroma &amp; Sabor</text>
-  <g font-family="Arial" font-size="14" fill="#e3c9a6">
-    <text x="620" y="46">Cardápio</text>
-    <text x="710" y="46">Sobre</text>
-    <text x="780" y="46">Contato</text>
+
+  <rect width="960" height="600" fill="url(#cwood)"/>
+  <!-- wood plank lines -->
+  <g stroke="#2c1c10" stroke-width="2" opacity="0.35">
+    <line x1="0" y1="140" x2="960" y2="140"/>
+    <line x1="0" y1="260" x2="960" y2="260"/>
+    <line x1="0" y1="380" x2="960" y2="380"/>
+    <line x1="0" y1="500" x2="960" y2="500"/>
   </g>
-  <rect x="850" y="24" width="86" height="36" rx="18" fill="url(#btn1)"/>
-  <text x="866" y="47" font-family="Arial" font-size="13" fill="#241208" font-weight="700">Pedir</text>
 
-  <text x="60" y="180" font-family="Georgia, serif" font-size="42" fill="#f4e3c9" font-weight="700">O melhor café</text>
-  <text x="60" y="222" font-family="Georgia, serif" font-size="42" fill="#e8a33d" font-weight="700">da sua rotina.</text>
-  <text x="60" y="258" font-family="Arial" font-size="15" fill="#c9b190">Grãos selecionados, torra artesanal e um cardápio feito com carinho.</text>
-  <rect x="60" y="284" width="168" height="46" rx="23" fill="url(#btn1)"/>
-  <text x="86" y="313" font-family="Arial" font-size="14" fill="#241208" font-weight="700">Ver cardápio</text>
-
-  <circle cx="740" cy="230" r="140" fill="#3a2213" opacity="0.7"/>
-  <circle cx="740" cy="230" r="96" fill="#c9791f" opacity="0.85"/>
-  <ellipse cx="740" cy="230" rx="70" ry="46" fill="#efe3d0"/>
-  <ellipse cx="740" cy="222" rx="58" ry="34" fill="#5c3517"/>
-  <path d="M700 150c6-16 26-16 20 0" stroke="#e3c9a6" stroke-width="6" fill="none" stroke-linecap="round"/>
-  <path d="M726 140c6-18 26-18 20 0" stroke="#e3c9a6" stroke-width="6" fill="none" stroke-linecap="round"/>
-
-  <g>
-    <rect x="60" y="400" width="255" height="150" rx="16" fill="url(#card1)" stroke="#4a2c17"/>
-    <circle cx="105" cy="445" r="20" fill="#e8a33d"/>
-    <text x="140" y="440" font-family="Arial" font-size="15" fill="#f4e3c9" font-weight="700">Espresso</text>
-    <text x="140" y="460" font-family="Arial" font-size="12" fill="#c9b190">R$ 8,90</text>
-    <text x="80" y="510" font-family="Arial" font-size="12" fill="#c9b190">Intenso e encorpado, extraído na hora.</text>
-
-    <rect x="350" y="400" width="255" height="150" rx="16" fill="url(#card1)" stroke="#4a2c17"/>
-    <circle cx="395" cy="445" r="20" fill="#e8a33d"/>
-    <text x="430" y="440" font-family="Arial" font-size="15" fill="#f4e3c9" font-weight="700">Cappuccino</text>
-    <text x="430" y="460" font-family="Arial" font-size="12" fill="#c9b190">R$ 12,90</text>
-    <text x="370" y="510" font-family="Arial" font-size="12" fill="#c9b190">Cremoso, com espuma de leite vaporizado.</text>
-
-    <rect x="640" y="400" width="255" height="150" rx="16" fill="url(#card1)" stroke="#4a2c17"/>
-    <circle cx="685" cy="445" r="20" fill="#e8a33d"/>
-    <text x="720" y="440" font-family="Arial" font-size="15" fill="#f4e3c9" font-weight="700">Croissant</text>
-    <text x="720" y="460" font-family="Arial" font-size="12" fill="#c9b190">R$ 10,50</text>
-    <text x="660" y="510" font-family="Arial" font-size="12" fill="#c9b190">Amanteigado, folhado e assado na hora.</text>
+  <!-- coffee beans scattered right -->
+  <g fill="#2a1a10">
+    <ellipse cx="760" cy="120" rx="16" ry="11" transform="rotate(20 760 120)"/>
+    <ellipse cx="800" cy="150" rx="16" ry="11" transform="rotate(-10 800 150)"/>
+    <ellipse cx="840" cy="110" rx="16" ry="11" transform="rotate(35 840 110)"/>
+    <ellipse cx="880" cy="160" rx="16" ry="11" transform="rotate(-25 880 160)"/>
+    <ellipse cx="910" cy="90" rx="16" ry="11" transform="rotate(10 910 90)"/>
+    <ellipse cx="720" cy="80" rx="16" ry="11" transform="rotate(-15 720 80)"/>
   </g>
+  <!-- burlap sack corner -->
+  <path d="M900 0 L960 0 L960 220 C920 230 880 190 880 140 C880 90 900 40 900 0Z" fill="#8a6a44" opacity="0.85"/>
+  <g stroke="#6a4e30" stroke-width="1.4" opacity="0.6">
+    <line x1="895" y1="20" x2="955" y2="30"/>
+    <line x1="890" y1="50" x2="955" y2="60"/>
+    <line x1="888" y1="80" x2="950" y2="92"/>
+    <line x1="886" y1="112" x2="945" y2="126"/>
+  </g>
+
+  <!-- coffee cup + saucer -->
+  <ellipse cx="330" cy="440" rx="150" ry="30" fill="#f4ede2" opacity="0.95"/>
+  <ellipse cx="300" cy="380" rx="105" ry="72" fill="#f7f1e8"/>
+  <ellipse cx="300" cy="372" rx="88" ry="56" fill="#6b4226"/>
+  <ellipse cx="300" cy="368" rx="72" ry="42" fill="#8a5a34"/>
+  <path d="M388 350c30-6 46 14 40 36-6 22-34 30-50 22" fill="none" stroke="#f7f1e8" stroke-width="14" stroke-linecap="round"/>
+  <path d="M260 300c4-16 26-16 20 4M290 292c4-18 28-18 20 4M320 300c4-16 24-16 18 4" stroke="#efe6d8" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.85"/>
+  <path d="M120 300c0-40 20-70 20-70" stroke="#efe6d8" stroke-width="4" fill="none" opacity="0.5"/>
+  <!-- spoon -->
+  <ellipse cx="420" cy="470" rx="14" ry="20" fill="#e9e0d2" transform="rotate(30 420 470)"/>
+  <rect x="410" y="460" width="8" height="70" rx="4" fill="#e9e0d2" transform="rotate(30 420 470)"/>
+
+  <rect x="0" y="0" width="960" height="60" fill="#0c0a08" opacity="0.85"/>
+  <g font-family="Arial" font-size="14" fill="#f2ede4" letter-spacing="1.5" font-weight="700">
+    <text x="330" y="36">CAFÉS</text>
+    <text x="430" y="36">COMIDAS</text>
+    <text x="546" y="36">SOBRE</text>
+    <text x="640" y="36">CONTATO</text>
+  </g>
+
+  <rect width="960" height="600" fill="url(#coverlay)"/>
+  <text x="330" y="330" font-family="Georgia, serif" font-size="52" fill="#ffffff" font-weight="700">Aroma &amp; Sabor</text>
+  <text x="330" y="368" font-family="Arial" font-size="17" fill="#e6ddd0">Cafés especiais e comidas artesanais</text>
 </svg>
