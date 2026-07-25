@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#241208"/>
+      <stop offset="1" stop-color="#120a06"/>
+    </linearGradient>
+    <linearGradient id="card1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a2213"/>
+      <stop offset="1" stop-color="#2a180d"/>
+    </linearGradient>
+    <linearGradient id="btn1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e8a33d"/>
+      <stop offset="1" stop-color="#c9791f"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="600" fill="url(#bg1)"/>
+  <rect x="0" y="0" width="960" height="84" fill="#1a0f08" opacity="0.9"/>
+  <circle cx="48" cy="42" r="16" fill="#e8a33d"/>
+  <text x="76" y="50" font-family="Georgia, serif" font-size="24" fill="#f4e3c9" font-weight="700">Aroma &amp; Sabor</text>
+  <g font-family="Arial" font-size="14" fill="#e3c9a6">
+    <text x="620" y="46">Cardápio</text>
+    <text x="710" y="46">Sobre</text>
+    <text x="780" y="46">Contato</text>
+  </g>
+  <rect x="850" y="24" width="86" height="36" rx="18" fill="url(#btn1)"/>
+  <text x="866" y="47" font-family="Arial" font-size="13" fill="#241208" font-weight="700">Pedir</text>
+
+  <text x="60" y="180" font-family="Georgia, serif" font-size="42" fill="#f4e3c9" font-weight="700">O melhor café</text>
+  <text x="60" y="222" font-family="Georgia, serif" font-size="42" fill="#e8a33d" font-weight="700">da sua rotina.</text>
+  <text x="60" y="258" font-family="Arial" font-size="15" fill="#c9b190">Grãos selecionados, torra artesanal e um cardápio feito com carinho.</text>
+  <rect x="60" y="284" width="168" height="46" rx="23" fill="url(#btn1)"/>
+  <text x="86" y="313" font-family="Arial" font-size="14" fill="#241208" font-weight="700">Ver cardápio</text>
+
+  <circle cx="740" cy="230" r="140" fill="#3a2213" opacity="0.7"/>
+  <circle cx="740" cy="230" r="96" fill="#c9791f" opacity="0.85"/>
+  <ellipse cx="740" cy="230" rx="70" ry="46" fill="#efe3d0"/>
+  <ellipse cx="740" cy="222" rx="58" ry="34" fill="#5c3517"/>
+  <path d="M700 150c6-16 26-16 20 0" stroke="#e3c9a6" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M726 140c6-18 26-18 20 0" stroke="#e3c9a6" stroke-width="6" fill="none" stroke-linecap="round"/>
+
+  <g>
+    <rect x="60" y="400" width="255" height="150" rx="16" fill="url(#card1)" stroke="#4a2c17"/>
+    <circle cx="105" cy="445" r="20" fill="#e8a33d"/>
+    <text x="140" y="440" font-family="Arial" font-size="15" fill="#f4e3c9" font-weight="700">Espresso</text>
+    <text x="140" y="460" font-family="Arial" font-size="12" fill="#c9b190">R$ 8,90</text>
+    <text x="80" y="510" font-family="Arial" font-size="12" fill="#c9b190">Intenso e encorpado, extraído na hora.</text>
+
+    <rect x="350" y="400" width="255" height="150" rx="16" fill="url(#card1)" stroke="#4a2c17"/>
+    <circle cx="395" cy="445" r="20" fill="#e8a33d"/>
+    <text x="430" y="440" font-family="Arial" font-size="15" fill="#f4e3c9" font-weight="700">Cappuccino</text>
+    <text x="430" y="460" font-family="Arial" font-size="12" fill="#c9b190">R$ 12,90</text>
+    <text x="370" y="510" font-family="Arial" font-size="12" fill="#c9b190">Cremoso, com espuma de leite vaporizado.</text>
+
+    <rect x="640" y="400" width="255" height="150" rx="16" fill="url(#card1)" stroke="#4a2c17"/>
+    <circle cx="685" cy="445" r="20" fill="#e8a33d"/>
+    <text x="720" y="440" font-family="Arial" font-size="15" fill="#f4e3c9" font-weight="700">Croissant</text>
+    <text x="720" y="460" font-family="Arial" font-size="12" fill="#c9b190">R$ 10,50</text>
+    <text x="660" y="510" font-family="Arial" font-size="12" fill="#c9b190">Amanteigado, folhado e assado na hora.</text>
+  </g>
+</svg>

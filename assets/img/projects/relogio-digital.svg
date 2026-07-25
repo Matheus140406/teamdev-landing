@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="45%" r="60%">
+      <stop offset="0" stop-color="#0f2027"/>
+      <stop offset="1" stop-color="#020507"/>
+    </radialGradient>
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#0ea5e9"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="600" fill="url(#glow)"/>
+  <text x="480" y="70" text-anchor="middle" font-family="Arial" font-size="16" fill="#67e8f9" letter-spacing="4">RELÓGIO DIGITAL</text>
+
+  <text x="480" y="300" text-anchor="middle" font-family="Consolas, monospace" font-size="140" fill="url(#neon)" font-weight="700" style="filter:drop-shadow(0 0 18px rgba(34,211,238,.55))">14:07:32</text>
+  <text x="480" y="360" text-anchor="middle" font-family="Arial" font-size="20" fill="#a5f3fc" letter-spacing="3">SEXTA-FEIRA · 25 JUL 2026</text>
+
+  <g stroke="#0ea5e9" stroke-width="2" opacity="0.5">
+    <line x1="180" y1="420" x2="780" y2="420"/>
+  </g>
+
+  <g>
+    <rect x="220" y="450" width="150" height="80" rx="14" fill="#0b1620" stroke="#134e5f"/>
+    <text x="295" y="485" text-anchor="middle" font-family="Arial" font-size="12" fill="#67e8f9">CRONÔMETRO</text>
+    <text x="295" y="512" text-anchor="middle" font-family="Consolas, monospace" font-size="18" fill="#e0f7ff">00:00:00</text>
+
+    <rect x="405" y="450" width="150" height="80" rx="14" fill="#0b1620" stroke="#134e5f"/>
+    <text x="480" y="485" text-anchor="middle" font-family="Arial" font-size="12" fill="#67e8f9">ALARME</text>
+    <text x="480" y="512" text-anchor="middle" font-family="Consolas, monospace" font-size="18" fill="#e0f7ff">07:00</text>
+
+    <rect x="590" y="450" width="150" height="80" rx="14" fill="#0b1620" stroke="#134e5f"/>
+    <text x="665" y="485" text-anchor="middle" font-family="Arial" font-size="12" fill="#67e8f9">FUSO</text>
+    <text x="665" y="512" text-anchor="middle" font-family="Consolas, monospace" font-size="18" fill="#e0f7ff">GMT-3</text>
+  </g>
+
+  <circle cx="150" cy="130" r="3" fill="#22d3ee"/>
+  <circle cx="800" cy="160" r="3" fill="#22d3ee"/>
+  <circle cx="120" cy="480" r="3" fill="#22d3ee"/>
+  <circle cx="860" cy="500" r="3" fill="#22d3ee"/>
+</svg>
