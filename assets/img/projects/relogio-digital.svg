@@ -1,40 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
   <defs>
-    <radialGradient id="glow" cx="50%" cy="45%" r="60%">
-      <stop offset="0" stop-color="#0f2027"/>
-      <stop offset="1" stop-color="#020507"/>
-    </radialGradient>
-    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#22d3ee"/>
-      <stop offset="1" stop-color="#0ea5e9"/>
+    <linearGradient id="rdbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8ded4"/>
+      <stop offset="1" stop-color="#fdf1ec"/>
     </linearGradient>
   </defs>
-  <rect width="960" height="600" fill="url(#glow)"/>
-  <text x="480" y="70" text-anchor="middle" font-family="Arial" font-size="16" fill="#67e8f9" letter-spacing="4">RELÓGIO DIGITAL</text>
+  <rect width="960" height="600" fill="url(#rdbg)"/>
 
-  <text x="480" y="300" text-anchor="middle" font-family="Consolas, monospace" font-size="140" fill="url(#neon)" font-weight="700" style="filter:drop-shadow(0 0 18px rgba(34,211,238,.55))">14:07:32</text>
-  <text x="480" y="360" text-anchor="middle" font-family="Arial" font-size="20" fill="#a5f3fc" letter-spacing="3">SEXTA-FEIRA · 25 JUL 2026</text>
+  <!-- small clock badge, top-left -->
+  <rect x="40" y="36" width="86" height="40" rx="10" fill="#2a2a2a"/>
+  <text x="83" y="58" text-anchor="middle" font-family="Consolas, monospace" font-size="14" fill="#ffffff" font-weight="700">02:29</text>
+  <text x="83" y="72" text-anchor="middle" font-family="Arial" font-size="9" fill="#c9c9c9">25/07/2026</text>
 
-  <g stroke="#0ea5e9" stroke-width="2" opacity="0.5">
-    <line x1="180" y1="420" x2="780" y2="420"/>
-  </g>
-
+  <!-- countdown card -->
   <g>
-    <rect x="220" y="450" width="150" height="80" rx="14" fill="#0b1620" stroke="#134e5f"/>
-    <text x="295" y="485" text-anchor="middle" font-family="Arial" font-size="12" fill="#67e8f9">CRONÔMETRO</text>
-    <text x="295" y="512" text-anchor="middle" font-family="Consolas, monospace" font-size="18" fill="#e0f7ff">00:00:00</text>
+    <rect x="290" y="220" width="380" height="200" rx="20" fill="#ffffff" opacity="0.55"/>
+    <rect x="330" y="248" width="90" height="120" rx="14" fill="#7a6a67"/>
+    <rect x="435" y="248" width="90" height="120" rx="14" fill="#7a6a67"/>
+    <rect x="540" y="248" width="90" height="120" rx="14" fill="#7a6a67"/>
 
-    <rect x="405" y="450" width="150" height="80" rx="14" fill="#0b1620" stroke="#134e5f"/>
-    <text x="480" y="485" text-anchor="middle" font-family="Arial" font-size="12" fill="#67e8f9">ALARME</text>
-    <text x="480" y="512" text-anchor="middle" font-family="Consolas, monospace" font-size="18" fill="#e0f7ff">07:00</text>
+    <text x="375" y="315" text-anchor="middle" font-family="Arial" font-size="40" fill="#ffffff" font-weight="800">02</text>
+    <text x="375" y="345" text-anchor="middle" font-family="Arial" font-size="15" fill="#f0e9e7" font-weight="700">Horas</text>
 
-    <rect x="590" y="450" width="150" height="80" rx="14" fill="#0b1620" stroke="#134e5f"/>
-    <text x="665" y="485" text-anchor="middle" font-family="Arial" font-size="12" fill="#67e8f9">FUSO</text>
-    <text x="665" y="512" text-anchor="middle" font-family="Consolas, monospace" font-size="18" fill="#e0f7ff">GMT-3</text>
+    <text x="480" y="315" text-anchor="middle" font-family="Arial" font-size="40" fill="#ffffff" font-weight="800">29</text>
+    <text x="480" y="345" text-anchor="middle" font-family="Arial" font-size="15" fill="#f0e9e7" font-weight="700">Minutos</text>
+
+    <text x="585" y="315" text-anchor="middle" font-family="Arial" font-size="40" fill="#ffffff" font-weight="800">27</text>
+    <text x="585" y="345" text-anchor="middle" font-family="Arial" font-size="15" fill="#f0e9e7" font-weight="700">Segundos</text>
   </g>
 
-  <circle cx="150" cy="130" r="3" fill="#22d3ee"/>
-  <circle cx="800" cy="160" r="3" fill="#22d3ee"/>
-  <circle cx="120" cy="480" r="3" fill="#22d3ee"/>
-  <circle cx="860" cy="500" r="3" fill="#22d3ee"/>
+  <text x="480" y="470" text-anchor="middle" font-family="Arial" font-size="14" fill="#b08b83" letter-spacing="2">CONTAGEM REGRESSIVA</text>
 </svg>
