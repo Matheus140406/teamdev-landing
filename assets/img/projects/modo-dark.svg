@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+  <defs>
+    <linearGradient id="bgd" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0e1a"/>
+      <stop offset="1" stop-color="#05070c"/>
+    </linearGradient>
+    <linearGradient id="bgl" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4f7ff"/>
+      <stop offset="1" stop-color="#e4ecfb"/>
+    </linearGradient>
+    <linearGradient id="btnpurple" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#6d28d9"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="600" fill="#0d1117"/>
+
+  <!-- Dark half -->
+  <g>
+    <rect x="0" y="0" width="480" height="600" fill="url(#bgd)"/>
+    <circle cx="120" cy="80" r="6" fill="#8b5cf6"/>
+    <text x="140" y="86" font-family="Arial" font-size="18" fill="#e5e7eb" font-weight="700">ModoDark</text>
+    <text x="60" y="200" font-family="Arial" font-size="30" fill="#f3f4f6" font-weight="700">Interface</text>
+    <text x="60" y="238" font-family="Arial" font-size="30" fill="#a78bfa" font-weight="700">Dark Mode</text>
+    <text x="60" y="270" font-family="Arial" font-size="13" fill="#9ca3af">Alternância suave entre temas claro e escuro.</text>
+
+    <rect x="60" y="300" width="360" height="64" rx="32" fill="#161b25" stroke="#242c3a"/>
+    <circle cx="392" cy="332" r="26" fill="url(#btnpurple)"/>
+    <path d="M384 322a12 12 0 1 0 8 20 14 14 0 0 1-8-20z" fill="#0d1117"/>
+    <text x="88" y="338" font-family="Arial" font-size="14" fill="#e5e7eb">Tema escuro ativado</text>
+
+    <rect x="60" y="400" width="170" height="90" rx="14" fill="#161b25" stroke="#242c3a"/>
+    <rect x="250" y="400" width="170" height="90" rx="14" fill="#161b25" stroke="#242c3a"/>
+    <circle cx="100" cy="432" r="10" fill="#a78bfa"/>
+    <circle cx="290" cy="432" r="10" fill="#a78bfa"/>
+    <rect x="80" y="456" width="120" height="8" rx="4" fill="#2a3140"/>
+    <rect x="270" y="456" width="120" height="8" rx="4" fill="#2a3140"/>
+  </g>
+
+  <!-- Light half -->
+  <g>
+    <rect x="480" y="0" width="480" height="600" fill="url(#bgl)"/>
+    <circle cx="600" cy="80" r="6" fill="#6d28d9"/>
+    <text x="620" y="86" font-family="Arial" font-size="18" fill="#111827" font-weight="700">ModoDark</text>
+    <text x="540" y="200" font-family="Arial" font-size="30" fill="#111827" font-weight="700">Interface</text>
+    <text x="540" y="238" font-family="Arial" font-size="30" fill="#6d28d9" font-weight="700">Light Mode</text>
+    <text x="540" y="270" font-family="Arial" font-size="13" fill="#4b5563">Preferência salva automaticamente no navegador.</text>
+
+    <rect x="540" y="300" width="360" height="64" rx="32" fill="#ffffff" stroke="#dbe1ee"/>
+    <circle cx="568" cy="332" r="26" fill="url(#btnpurple)"/>
+    <circle cx="568" cy="332" r="10" fill="#fde68a"/>
+    <text x="608" y="338" font-family="Arial" font-size="14" fill="#111827">Tema claro ativado</text>
+
+    <rect x="540" y="400" width="170" height="90" rx="14" fill="#ffffff" stroke="#dbe1ee"/>
+    <rect x="730" y="400" width="170" height="90" rx="14" fill="#ffffff" stroke="#dbe1ee"/>
+    <circle cx="580" cy="432" r="10" fill="#6d28d9"/>
+    <circle cx="770" cy="432" r="10" fill="#6d28d9"/>
+    <rect x="560" y="456" width="120" height="8" rx="4" fill="#e5e9f2"/>
+    <rect x="750" y="456" width="120" height="8" rx="4" fill="#e5e9f2"/>
+  </g>
+
+  <rect x="470" y="0" width="20" height="600" fill="#0d1117"/>
+  <circle cx="480" cy="300" r="26" fill="#0d1117"/>
+  <path d="M470 288a14 14 0 0 1 0 24" stroke="#a78bfa" stroke-width="3" fill="none"/>
+  <path d="M490 288a14 14 0 0 0 0 24" stroke="#a78bfa" stroke-width="3" fill="none"/>
+</svg>

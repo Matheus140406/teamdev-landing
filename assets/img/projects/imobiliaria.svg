@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+  <defs>
+    <linearGradient id="ibg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c1424"/>
+      <stop offset="1" stop-color="#060a14"/>
+    </linearGradient>
+    <linearGradient id="ibtn" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f59e0b"/>
+      <stop offset="1" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="600" fill="url(#ibg)"/>
+  <circle cx="46" cy="42" r="16" fill="#f59e0b"/>
+  <text x="74" y="50" font-family="Arial" font-size="20" fill="#f1f5fb" font-weight="700">Imobiliária</text>
+  <g font-family="Arial" font-size="14" fill="#c9d3e6">
+    <text x="650" y="46">Comprar</text>
+    <text x="730" y="46">Alugar</text>
+    <text x="800" y="46">Anunciar</text>
+  </g>
+  <rect x="60" y="90" width="840" height="60" rx="14" fill="#101a2c" stroke="#243352"/>
+  <text x="86" y="126" font-family="Arial" font-size="14" fill="#8391ab">Buscar por cidade, bairro ou código do imóvel...</text>
+  <rect x="800" y="100" width="80" height="40" rx="10" fill="url(#ibtn)"/>
+  <text x="820" y="125" font-family="Arial" font-size="13" fill="#1a1204" font-weight="700">Buscar</text>
+
+  <g>
+    <rect x="60" y="180" width="270" height="200" rx="16" fill="#101a2c" stroke="#243352"/>
+    <rect x="60" y="180" width="270" height="120" rx="16" fill="#1b2c4a"/>
+    <path d="M110 260l40-40 40 40 30-25 40 30" stroke="#3b5788" stroke-width="4" fill="none"/>
+    <text x="80" y="322" font-family="Arial" font-size="14" fill="#f1f5fb" font-weight="700">Apartamento · Asa Sul</text>
+    <text x="80" y="344" font-family="Arial" font-size="13" fill="#f59e0b" font-weight="700">R$ 620.000</text>
+    <text x="80" y="364" font-family="Arial" font-size="12" fill="#8391ab">3 quartos · 2 vagas · 98m²</text>
+
+    <rect x="350" y="180" width="270" height="200" rx="16" fill="#101a2c" stroke="#243352"/>
+    <rect x="350" y="180" width="270" height="120" rx="16" fill="#1b2c4a"/>
+    <path d="M400 260l40-40 40 40 30-25 40 30" stroke="#3b5788" stroke-width="4" fill="none"/>
+    <text x="370" y="322" font-family="Arial" font-size="14" fill="#f1f5fb" font-weight="700">Casa · Lago Norte</text>
+    <text x="370" y="344" font-family="Arial" font-size="13" fill="#f59e0b" font-weight="700">R$ 1.450.000</text>
+    <text x="370" y="364" font-family="Arial" font-size="12" fill="#8391ab">4 quartos · 4 vagas · 320m²</text>
+
+    <rect x="640" y="180" width="260" height="200" rx="16" fill="#101a2c" stroke="#243352"/>
+    <rect x="640" y="180" width="260" height="120" rx="16" fill="#1b2c4a"/>
+    <path d="M690 260l40-40 40 40 30-25 30 30" stroke="#3b5788" stroke-width="4" fill="none"/>
+    <text x="660" y="322" font-family="Arial" font-size="14" fill="#f1f5fb" font-weight="700">Cobertura · Sudoeste</text>
+    <text x="660" y="344" font-family="Arial" font-size="13" fill="#f59e0b" font-weight="700">R$ 980.000</text>
+    <text x="660" y="364" font-family="Arial" font-size="12" fill="#8391ab">3 quartos · 3 vagas · 210m²</text>
+  </g>
+
+  <text x="60" y="440" font-family="Arial" font-size="13" fill="#8391ab">+ 320 imóveis disponíveis em todo o Distrito Federal</text>
+</svg>
