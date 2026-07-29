@@ -7,4 +7,4 @@ Allow: /
 User-agent: *
 Disallow: /
 
-Sitemap: https://teamdev.com.br/sitemap.xml
+Sitemap: https://devteamtech.com.br/sitemap.xml

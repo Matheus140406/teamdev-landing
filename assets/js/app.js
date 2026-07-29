@@ -12,6 +12,9 @@
   var $$ = function (s, c) { return [].slice.call((c || document).querySelectorAll(s)); };
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  /* fade-in suave assim que o JS assume o carregamento da página */
+  document.body.classList.add("is-loaded");
+
   /* ---------- i18n ---------- */
   /* dicionários ficam em assets/i18n/<lang>.json e são carregados sob
      demanda — o texto PT já vem no HTML, então o bundle fica pequeno */
