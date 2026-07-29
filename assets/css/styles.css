@@ -90,7 +90,7 @@
 }
 
 * { box-sizing: border-box; margin: 0; }
-html { scroll-behavior: smooth; overflow-x: hidden; }
+html { overflow-x: hidden; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 body {
@@ -100,7 +100,12 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  transition: background 0.15s ease-out, color 0.15s ease-out;
+  opacity: 0;
+  transition: background 0.15s ease-out, color 0.15s ease-out, opacity 0.5s ease-out;
+}
+body.is-loaded { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  body { opacity: 1; transition: none; }
 }
 
 /* aurora de fundo animada */
