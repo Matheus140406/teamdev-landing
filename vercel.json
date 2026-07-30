@@ -18,6 +18,10 @@
         { "key": "X-Permitted-Cross-Domain-Policies", "value": "none" }
       ]
     },
-    { "source": "/assets/(.*)", "headers": [ { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" } ] }
+    { "source": "/assets/img/(.*)", "headers": [ { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" } ] },
+    { "source": "/assets/fonts/(.*)", "headers": [ { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" } ] },
+    { "source": "/assets/css/(.*)", "headers": [ { "key": "Cache-Control", "value": "public, max-age=300, must-revalidate" } ] },
+    { "source": "/assets/js/(.*)", "headers": [ { "key": "Cache-Control", "value": "public, max-age=300, must-revalidate" } ] },
+    { "source": "/assets/i18n/(.*)", "headers": [ { "key": "Cache-Control", "value": "public, max-age=300, must-revalidate" } ] }
   ]
 }
