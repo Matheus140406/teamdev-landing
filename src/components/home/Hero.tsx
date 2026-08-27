@@ -26,12 +26,12 @@ export default function Hero() {
         <div className="px-layer px-blob b1" data-depth="0.5" />
         <div className="px-layer px-blob b2" data-depth="0.4" />
         <svg className="px-layer px-rings" data-depth="0.6" viewBox="0 0 400 400" fill="none">
-          <circle cx="200" cy="200" r="70" stroke="#4f8bff" strokeOpacity="0.5" />
-          <circle cx="200" cy="200" r="120" stroke="#38bdf8" strokeOpacity="0.3" />
-          <circle cx="200" cy="200" r="170" stroke="#4f8bff" strokeOpacity="0.18" />
-          <circle cx="270" cy="200" r="5" fill="#38bdf8" />
-          <circle cx="80" cy="200" r="4" fill="#4f8bff" />
-          <circle cx="200" cy="30" r="4" fill="#4f8bff" />
+          <circle cx="200" cy="200" r="70" stroke="#a855ff" strokeOpacity="0.5" />
+          <circle cx="200" cy="200" r="120" stroke="#c084fc" strokeOpacity="0.3" />
+          <circle cx="200" cy="200" r="170" stroke="#a855ff" strokeOpacity="0.18" />
+          <circle cx="270" cy="200" r="5" fill="#c084fc" />
+          <circle cx="80" cy="200" r="4" fill="#a855ff" />
+          <circle cx="200" cy="30" r="4" fill="#a855ff" />
         </svg>
       </div>
       <div className="wrap hero-grid">
