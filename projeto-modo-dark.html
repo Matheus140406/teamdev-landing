@@ -8,61 +8,12 @@
 <meta name="description" content="Interface com alternância entre tema claro e escuro. Projeto de estudo hospedado no GitHub." />
 <meta name="color-scheme" content="dark light" />
 <meta name="theme-color" content="#05070d" />
-<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-<link rel="shortcut icon" href="assets/img/favicon.ico" />
-<link rel="manifest" href="site.webmanifest" />
-<link rel="stylesheet" href="assets/css/portfolio.css" />
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+<link rel="shortcut icon" href="/assets/img/favicon.ico" />
+<link rel="manifest" href="/site.webmanifest" />
 </head>
 <body class="pf-body">
-
-<header class="pf-header">
-  <div class="pf-wrap pf-nav">
-    <a class="pf-brand" href="index.html"><span class="dot"></span> Dev Team <span class="grad">Tech</span></a>
-    <a class="pf-back" href="portfolio.html#github">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-      Voltar ao portfólio
-    </a>
-  </div>
-</header>
-
-<main>
-  <section class="pf-detail-hero">
-    <div class="pf-wrap">
-      <span class="pf-eyebrow">Projeto no GitHub</span>
-      <h1 style="font-family:var(--pf-font-d);font-weight:700;font-size:clamp(28px,4.4vw,44px);letter-spacing:-.02em;margin:18px 0 8px">ModoDark</h1>
-      <p style="color:var(--pf-ink-soft);max-width:60ch;font-size:16px">Interface de exemplo com alternância suave entre tema claro e escuro, salvando a preferência do usuário para a próxima visita.</p>
-
-      <div class="pf-detail-media">
-        <img src="assets/img/projects/modo-dark.svg" alt="Comparativo do tema claro e escuro da interface ModoDark" />
-      </div>
-
-      <div class="pf-detail-grid">
-        <div>
-          <h2>Sobre o projeto</h2>
-          <p>O ModoDark foi criado para praticar a implementação de temas dinâmicos: um botão alterna entre modo claro e escuro em toda a interface, com transição suave e persistência da escolha via armazenamento local do navegador.</p>
-          <h2>O que foi praticado</h2>
-          <p>Uso de variáveis CSS para tematização, manipulação de classes via JavaScript, armazenamento em localStorage e cuidado com contraste e acessibilidade em ambos os temas.</p>
-        </div>
-        <aside class="pf-side">
-          <h3>Ficha técnica</h3>
-          <dl>
-            <dt>Tipo</dt><dd>UI / componente</dd>
-            <dt>Stack</dt><dd>HTML, CSS, JS</dd>
-            <dt>Hospedagem</dt><dd>Apenas GitHub</dd>
-            <dt>Status</dt><dd>Projeto de estudo</dd>
-          </dl>
-          <a class="pf-btn primary" href="https://github.com/Matheus140406/ModoDark" target="_blank" rel="noopener noreferrer">Ver código no GitHub</a>
-        </aside>
-      </div>
-    </div>
-  </section>
-
-  <div class="pf-wrap">
-    <footer class="pf-footer">
-      <span>© 2026 Dev Team Tech. Todos os direitos reservados.</span>
-      <span><a href="portfolio.html">← Ver todos os projetos</a></span>
-    </footer>
-  </div>
-</main>
+<div id="root"></div>
+<script type="module" src="/src/main-entries/projeto-modo-dark.tsx"></script>
 </body>
 </html>
