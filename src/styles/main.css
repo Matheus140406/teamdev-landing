@@ -1040,8 +1040,8 @@ html { scrollbar-width: thin; scrollbar-color: color-mix(in srgb, var(--blue-2) 
 /* tema claro: textos ciano/azul-claro escurecidos para leitura em fundo claro */
 [data-theme="light"] .wcard .cat,
 [data-theme="light"] .addon .badge-apart,
-[data-theme="light"] .comp.good .comp-tag { color: #0369a1; }
-[data-theme="light"] .comp.good .comp-tag { border-color: color-mix(in srgb, #0369a1 42%, transparent); }
+[data-theme="light"] .comp.good .comp-tag { color: var(--blue-deep); }
+[data-theme="light"] .comp.good .comp-tag { border-color: color-mix(in srgb, var(--blue-deep) 42%, transparent); }
 [data-theme="light"] .eyebrow { color: var(--blue-deep); }
 [data-theme="light"] .eyebrow::before { background: linear-gradient(90deg, var(--blue-deep), transparent); }
 [data-theme="light"] .hero-badge, [data-theme="light"] .demo-badge { color: var(--ink-soft); }
