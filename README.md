@@ -1,6 +1,8 @@
-# Team Dev — Landing Page (V4)
+# Dev Team Tech — Landing Page
 
-HTML/CSS/JS puro, multi-página, pronta pro **GitHub Pages**.
+React + Vite + Tailwind CSS v4 (TypeScript), multi-página (cada `.html` é uma rota real, sem router client-side), pronta pra **Vercel**.
+
+> A partir da V19 o site deixou de ser HTML/CSS/JS puro e virou um app React/Vite — veja a seção **V19** no fim deste changelog. O histórico V4–V18 abaixo documenta decisões de produto e conteúdo que continuam válidas (números de WhatsApp por pessoa, textos, etc.), só a implementação técnica mudou.
 
 ## ⚠️ Decisões importantes (conflitos do briefing V4)
 - O V4 pedia **roxo neon**, mas sua última instrução foi **preto + azul escuro** — mantive **preto/azul**. Voltar pro roxo é só trocar os tokens no topo do `styles.css`.
@@ -20,34 +22,38 @@ HTML/CSS/JS puro, multi-página, pronta pro **GitHub Pages**.
 - **Dark/Light** e **PT/EN** funcionais (172 chaves traduzidas), ambos persistidos.
 
 ## 🚀 Deploy
-Suba a pasta → GitHub Pages (branch `main`, `/root`). Ou abra `index.html`.
+Vercel detecta o `buildCommand`/`outputDirectory` do `vercel.json` (`pnpm build` → `dist/`). Localmente:
+```bash
+pnpm install
+pnpm dev      # servidor de desenvolvimento
+pnpm build    # build de produção em dist/
+pnpm preview  # serve o build de produção localmente
+```
 
 ## ✅ Antes de publicar
 | Onde | O quê |
 |---|---|
-| `assets/js/app.js` (`WHATSAPP`) | Número real `55DDDNUMERO` + **reofuscar** |
-| Estatísticas / Projetos / Logos / Depoimentos | Trocar placeholders por dados reais. **Nunca inventar.** |
-| `matheus.html` / `eduardo.html` | Preencher história/experiência/curiosidades (marcados com `//`) |
-| E-mail, domínio, telefone do schema | Trocar pelos reais |
-| Modal de Privacidade | Revisar com apoio jurídico |
-
-Reofuscar (após editar qualquer `.js`):
-```bash
-npx javascript-obfuscator app.js --output app.min.js --compact true \
-  --control-flow-flattening true --string-array true \
-  --string-array-encoding base64 --self-defending true --rename-globals false
-# repita para enhance.js
-```
+| `src/lib/whatsapp.ts` (`WHATSAPP_NUMBER`) | Número real `55DDDNUMERO` (compartilhado pela empresa) |
+| `src/data/team.ts` | Números pessoais do Eduardo/Daniel, bios, especialidades |
+| `src/data/projects.ts` | Projetos hospedados e do GitHub (portfólio) |
+| E-mail, domínio, telefone do schema (`index.html`) | Trocar pelos reais |
 
 ## 📁 Estrutura
 ```
 teamdev-landing/
-├── index.html · matheus.html · eduardo.html
-├── robots.txt · sitemap.xml · README.md
-└── assets/
-    ├── css/styles.css
-    ├── js/  app.js · app.min.js · enhance.js · enhance.min.js
-    └── img/ matheus.webp · eduardo.webp · og.png · hero-art.png
+├── index.html · portfolio.html · daniel.html · eduardo.html · matheus.html
+├── projeto-*.html · privacidade.html · cookies.html · 404.html
+├── vite.config.ts · tsconfig.json · package.json  (multi-página: cada .html é um entry point)
+├── src/
+│   ├── main-entries/  (1 arquivo por página, só monta o componente React)
+│   ├── pages/          (HomePage, PortfolioPage, TeamMemberPage, ProjectDetailPage, ...)
+│   ├── components/     (layout/, home/, portfolio/, ui/)
+│   ├── hooks/           (useTheme, useI18n, useLenisScroll, useReveal, ...)
+│   ├── data/            (team.ts, projects.ts, i18n/*.json)
+│   ├── lib/whatsapp.ts
+│   └── styles/          (tokens + CSS do design system + Tailwind)
+└── public/
+    └── assets/ (img/, fonts/) · site.webmanifest · robots.txt · sitemap.xml
 ```
 
 ## 🖼️ Imagens / Canva
@@ -179,3 +185,11 @@ projetos/
 - **Removidas TODAS as observações com `//`** — inclusive umas que apareciam no site (notas de "números ilustrativos", "depoimentos de exemplo", "revise com jurídico") e os `// edite...` / `// adicione...` das páginas dos fundadores.
 - **Responsividade reforçada**: `viewport-fit=cover` + safe-area (notch e barra inferior do iPhone), trava de zoom de texto no iOS. Continua respondendo por largura em iPhone/Android/Mac/Win/Linux.
 - **Mais vida**: hover e clique animados nos ícones; respeita quem prefere menos movimento.
+
+## 🆕 V19 — migração para React + Vite + Tailwind CSS v4
+
+- **Reescrita completa da implementação, mesmo comportamento**: as 11 páginas continuam existindo com as mesmas URLs (nenhum router client-side — cada `.html` é um entry point real do Vite), mesmo SEO por página (canonical/OG/JSON-LD), mesmo CSP e mesma UX (tema claro/escuro, i18n de 16 idiomas na home, cursor customizado, scroll suave via Lenis, showcase antes/depois, contadores animados, carrossel de depoimentos, banner de cookies, formulário → WhatsApp).
+- **Portfólio agora usa capturas reais** dos 3 projetos hospedados (High Performance Team, Imobiliária, Análise Corporal) em vez de ilustrações placeholder.
+- **Número de WhatsApp compartilhado atualizado**: `+55 61 9235-5047` (`src/lib/whatsapp.ts`). Os números pessoais do Eduardo e do Daniel (V17) foram preservados como estavam.
+- **Build**: `pnpm build` (Vite) substitui o pipeline antigo de `csso`/`javascript-obfuscator` — o `scripts/build.js` e a pasta `assets/js`/`assets/css` originais foram removidos; a lógica virou hooks/componentes React em `src/`.
+- **Duplicação removida**: as 3 páginas de fundadores e os 3 detalhes de projeto do GitHub agora são um único componente cada (`TeamMemberPage`, `ProjectDetailPage`) parametrizado por dados em `src/data/`.

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+  <defs>
+    <radialGradient id="cwood" cx="30%" cy="60%" r="80%">
+      <stop offset="0" stop-color="#7a5636"/>
+      <stop offset="1" stop-color="#3f2a18"/>
+    </radialGradient>
+    <linearGradient id="coverlay" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="960" height="600" fill="url(#cwood)"/>
+  <!-- wood plank lines -->
+  <g stroke="#2c1c10" stroke-width="2" opacity="0.35">
+    <line x1="0" y1="140" x2="960" y2="140"/>
+    <line x1="0" y1="260" x2="960" y2="260"/>
+    <line x1="0" y1="380" x2="960" y2="380"/>
+    <line x1="0" y1="500" x2="960" y2="500"/>
+  </g>
+
+  <!-- coffee beans scattered right -->
+  <g fill="#2a1a10">
+    <ellipse cx="760" cy="120" rx="16" ry="11" transform="rotate(20 760 120)"/>
+    <ellipse cx="800" cy="150" rx="16" ry="11" transform="rotate(-10 800 150)"/>
+    <ellipse cx="840" cy="110" rx="16" ry="11" transform="rotate(35 840 110)"/>
+    <ellipse cx="880" cy="160" rx="16" ry="11" transform="rotate(-25 880 160)"/>
+    <ellipse cx="910" cy="90" rx="16" ry="11" transform="rotate(10 910 90)"/>
+    <ellipse cx="720" cy="80" rx="16" ry="11" transform="rotate(-15 720 80)"/>
+  </g>
+  <!-- burlap sack corner -->
+  <path d="M900 0 L960 0 L960 220 C920 230 880 190 880 140 C880 90 900 40 900 0Z" fill="#8a6a44" opacity="0.85"/>
+  <g stroke="#6a4e30" stroke-width="1.4" opacity="0.6">
+    <line x1="895" y1="20" x2="955" y2="30"/>
+    <line x1="890" y1="50" x2="955" y2="60"/>
+    <line x1="888" y1="80" x2="950" y2="92"/>
+    <line x1="886" y1="112" x2="945" y2="126"/>
+  </g>
+
+  <!-- coffee cup + saucer -->
+  <ellipse cx="330" cy="440" rx="150" ry="30" fill="#f4ede2" opacity="0.95"/>
+  <ellipse cx="300" cy="380" rx="105" ry="72" fill="#f7f1e8"/>
+  <ellipse cx="300" cy="372" rx="88" ry="56" fill="#6b4226"/>
+  <ellipse cx="300" cy="368" rx="72" ry="42" fill="#8a5a34"/>
+  <path d="M388 350c30-6 46 14 40 36-6 22-34 30-50 22" fill="none" stroke="#f7f1e8" stroke-width="14" stroke-linecap="round"/>
+  <path d="M260 300c4-16 26-16 20 4M290 292c4-18 28-18 20 4M320 300c4-16 24-16 18 4" stroke="#efe6d8" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.85"/>
+  <path d="M120 300c0-40 20-70 20-70" stroke="#efe6d8" stroke-width="4" fill="none" opacity="0.5"/>
+  <!-- spoon -->
+  <ellipse cx="420" cy="470" rx="14" ry="20" fill="#e9e0d2" transform="rotate(30 420 470)"/>
+  <rect x="410" y="460" width="8" height="70" rx="4" fill="#e9e0d2" transform="rotate(30 420 470)"/>
+
+  <rect x="0" y="0" width="960" height="60" fill="#0c0a08" opacity="0.85"/>
+  <g font-family="Arial" font-size="14" fill="#f2ede4" letter-spacing="1.5" font-weight="700">
+    <text x="330" y="36">CAFÉS</text>
+    <text x="430" y="36">COMIDAS</text>
+    <text x="546" y="36">SOBRE</text>
+    <text x="640" y="36">CONTATO</text>
+  </g>
+
+  <rect width="960" height="600" fill="url(#coverlay)"/>
+  <text x="330" y="330" font-family="Georgia, serif" font-size="52" fill="#ffffff" font-weight="700">Aroma &amp; Sabor</text>
+  <text x="330" y="368" font-family="Arial" font-size="17" fill="#e6ddd0">Cafés especiais e comidas artesanais</text>
+</svg>
