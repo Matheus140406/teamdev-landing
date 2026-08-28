@@ -3,7 +3,6 @@ import { useI18n } from "@/hooks/useI18n"
 import { useHeroParticles, useHeroParallax, useDraggableMock } from "@/hooks/useHeroFx"
 import { useReveal } from "@/hooks/useReveal"
 import WhatsAppLink from "@/components/ui/WhatsAppLink"
-import PixelPC from "@/components/home/PixelPC"
 
 export default function Hero() {
   const { t } = useI18n()
@@ -81,7 +80,6 @@ export default function Hero() {
               loading="eager"
             />
           </div>
-          <PixelPC size={0.85} className="pixel-pc-hero" />
         </div>
       </div>
     </section>
