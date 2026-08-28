@@ -74,33 +74,12 @@ export default function Hero() {
         </div>
         <div ref={visual.ref} className={`hero-visual ${visual.className}`}>
           <div className="mock" id="heroMock" ref={mockRef}>
-            <div className="mock-bar">
-              <i /><i /><i /><span>devteamtech.com.br</span>
-            </div>
-            <div className="mock-body">
-              <div className="mock-row">
-                <div className="mock-ic">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M13 2 3 14h9l-1 8 10-12h-9z" /></svg>
-                </div>
-                <div>
-                  <div className="mock-line" />
-                  <div className="mock-line short" style={{ marginTop: 8 }} />
-                </div>
-              </div>
-              <div className="mock-row">
-                <div className="mock-ic">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 3v18h18" /><path d="m7 14 3-3 3 3 5-6" /></svg>
-                </div>
-                <div>
-                  <div className="mock-line" />
-                  <div className="mock-line short" style={{ marginTop: 8 }} />
-                </div>
-              </div>
-              <div className="mock-cta">{t("mock.cta", "Falar no WhatsApp")}</div>
-            </div>
-            <div className="mock-float">
-              <span className="dotok" /> <span>{t("mock.float", "Novo lead recebido")}</span>
-            </div>
+            <img
+              className="mock-img"
+              src="/assets/img/Gemini_Generated_Image_5fy9jf5fy9jf5fy9.jpg"
+              alt={t("hero.mockAlt", "Dev Team Tech")}
+              loading="eager"
+            />
           </div>
           <PixelPC size={0.85} className="pixel-pc-hero" />
         </div>
