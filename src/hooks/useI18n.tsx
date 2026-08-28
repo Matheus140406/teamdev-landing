@@ -31,7 +31,7 @@ function readInitialLang(): Lang {
 export function I18nProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>(readInitialLang)
   const dictsRef = useRef<Partial<Record<Lang, Dict>>>({})
-  const [, forceRender] = useState(0)
+  const [dictVersion, setDictVersion] = useState(0)
 
   useEffect(() => {
     document.documentElement.setAttribute("lang", lang === "pt" ? "pt-BR" : lang)
@@ -50,7 +50,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
         .then((r) => r.json())
         .then((d: Dict) => {
           dictsRef.current[next] = d
-          forceRender((n) => n + 1)
+          setDictVersion((n) => n + 1)
         })
         .catch(() => {
           /* mantém fallback PT se o dicionário não carregar */
@@ -69,7 +69,10 @@ export function I18nProvider({ children }: { children: ReactNode }) {
       const dict = dictsRef.current[lang]
       return dict?.[key] ?? fallbackPt
     },
-    [lang],
+    // dictVersion força a recriação de `t` (e do value do Context) quando um
+    // dicionário termina de carregar, já que dictsRef é uma ref e não
+    // dispara re-render por si só.
+    [lang, dictVersion],
   )
 
   const value = useMemo(() => ({ lang, setLang, t }), [lang, setLang, t])
