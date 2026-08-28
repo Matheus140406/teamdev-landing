@@ -56,7 +56,7 @@ export default function Footer() {
             <a href="#servicos">{t("nav.services", "Serviços")}</a>
             <a href="#diferenciais">{t("nav.diff", "Diferenciais")}</a>
             <a href="#processo">{t("nav.process", "Processo")}</a>
-            <a href="#suporte">{t("sup.eyebrow", "Suporte & manutenção")}</a>
+            <a href="#suporte">{t("sup.eyebrow", "Garantia & Otimização Contínua")}</a>
             <a href="#faq">{t("nav.faq", "FAQ")}</a>
           </div>
           <div>
