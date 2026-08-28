@@ -1,5 +1,6 @@
 import { useReveal } from "@/hooks/useReveal"
 import { useI18n } from "@/hooks/useI18n"
+import FaqItem from "@/components/home/FaqItem"
 
 const ITEMS = [
   { qKey: "faq.1.q", qPt: "Vocês são novos — têm experiência o suficiente?", aKey: "faq.1.a", aPt: "Sim. Trabalhamos com processo estruturado em etapas e tecnologias modernas. Você acompanha cada fase e aprova o resultado antes de ir ao ar." },
@@ -22,12 +23,7 @@ export default function Faq() {
         </div>
         <div className={`faq ${list.className}`} ref={list.ref}>
           {ITEMS.map((it) => (
-            <details className="q" key={it.qKey}>
-              <summary>
-                <span>{t(it.qKey, it.qPt)}</span> <span className="plus" />
-              </summary>
-              <div className="a">{t(it.aKey, it.aPt)}</div>
-            </details>
+            <FaqItem key={it.qKey} question={t(it.qKey, it.qPt)} answer={t(it.aKey, it.aPt)} />
           ))}
         </div>
       </div>
