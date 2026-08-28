@@ -13,7 +13,7 @@ const FEATURES: { icon: React.ReactNode; iconCls: string; key: string; pt: strin
     iconCls: "s-ic in",
     icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14.7 6.3a4.5 4.5 0 0 0-6 6L3 18v3h3l5.7-5.7a4.5 4.5 0 0 0 6-6L14 13l-3-3z" /></svg>,
     key: "sup.f2",
-    pt: "<b>Manutenções</b> após esse período são cobradas à parte, sempre com orçamento aprovado antes.",
+    pt: "<b>Evolução contínua</b> depois desse período — melhorias de performance, novos recursos e otimizações — sempre com orçamento aprovado antes.",
   },
   {
     iconCls: "s-ic in",
@@ -25,7 +25,7 @@ const FEATURES: { icon: React.ReactNode; iconCls: string; key: string; pt: strin
     iconCls: "s-ic in",
     icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="9" /><path d="M12 8v5M12 16h.01" /></svg>,
     key: "sup.f4",
-    pt: "<b>Atualizações técnicas importantes</b> que impactem o funcionamento do site são comunicadas previamente a você.",
+    pt: "<b>Atualizações de segurança e performance</b> são acompanhadas de perto, com suporte prioritário sempre que precisar.",
   },
 ]
 
@@ -38,7 +38,7 @@ export default function Support() {
       <span className="sec-orb c o1" aria-hidden="true" />
       <div className="wrap">
         <div className={head.className} ref={head.ref}>
-          <span className="eyebrow">{t("sup.eyebrow", "Suporte & manutenção")}</span>
+          <span className="eyebrow">{t("sup.eyebrow", "Garantia & Otimização Contínua")}</span>
           <h2 className="section-title">{t("sup.title", "Entregamos — e continuamos por perto.")}</h2>
           <p className="section-sub">
             {t("sup.sub", "Transparência total sobre o que está incluído no seu projeto e o que é cobrado à parte. Sem surpresa, sem letra miúda.")}
