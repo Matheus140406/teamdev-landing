@@ -939,8 +939,9 @@ img, video, canvas { max-width: 100%; height: auto; }
 .comp.good {
   border: 1.4px solid transparent !important;
   background:
-    linear-gradient(165deg, rgba(139, 61, 255, 0.16), rgba(139, 61, 255, 0.10) 60%, var(--panel)) padding-box,
+    linear-gradient(165deg, color-mix(in srgb, var(--purple) 16%, var(--panel)), var(--panel) 55%) padding-box,
     linear-gradient(135deg, var(--purple-2), var(--blue-2) 55%, var(--cyan)) border-box !important;
+  box-shadow: 0 24px 56px -32px color-mix(in srgb, var(--purple) 45%, transparent), var(--el-2) !important;
 }
 .comp-vs::before { display: none !important; }
 .comp-vs {
