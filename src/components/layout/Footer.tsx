@@ -69,6 +69,9 @@ export default function Footer() {
         </div>
         <div className="footer-bottom">
           <span>© <span id="year">{new Date().getFullYear()}</span> Dev Team Tech. <span>{t("foot.rights", "Todos os direitos reservados.")}</span></span>
+          <span className="footer-status">
+            <span className="pulse" /> {t("hero.badge", "Disponível para novos projetos")}
+          </span>
           <a className="btn btn-ghost" href="privacidade.html" target="_blank" rel="noopener noreferrer">
             Política de Privacidade · LGPD
           </a>
