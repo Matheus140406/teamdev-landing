@@ -12,7 +12,8 @@ function readInitialTheme(): Theme {
   } catch {
     /* localStorage indisponível (modo privado etc.) */
   }
-  return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark"
+  // Sem preferência salva: sempre abre no dark, ignorando o tema do SO.
+  return "dark"
 }
 
 function applyTheme(theme: Theme) {
