@@ -1,5 +1,6 @@
 import { useReveal } from "@/hooks/useReveal"
 import { useI18n } from "@/hooks/useI18n"
+import { useTimelineProgress } from "@/hooks/useTimelineProgress"
 
 const STEPS = [
   { icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><circle cx="11" cy="11" r="7" /><path d="m21 21-4.3-4.3" /></svg>, n: "ETAPA 01", tKey: "proc.1.t", tPt: "Descoberta", dKey: "proc.1.d", dPt: "Entendemos seu negócio, seu público e o objetivo do projeto." },
@@ -14,7 +15,8 @@ const STEPS = [
 export default function Process() {
   const { t } = useI18n()
   const head = useReveal()
-  const timeline = useReveal()
+  const timeline = useReveal<HTMLDivElement>()
+  useTimelineProgress(timeline.ref)
   return (
     <section className="section" id="processo">
       <div className="wrap">
