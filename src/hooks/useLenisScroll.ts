@@ -8,10 +8,10 @@ export function useLenisScroll() {
     if (reduced) return
 
     const lenis = new Lenis({
-      duration: 1.75,
-      easing: (t: number) => 1 - Math.pow(1 - t, 4),
+      duration: 1.1,
+      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
-      wheelMultiplier: 0.95,
+      wheelMultiplier: 1,
       syncTouch: true,
     })
 
