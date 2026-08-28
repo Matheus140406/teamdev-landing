@@ -488,12 +488,21 @@ body::after { content: ""; position: fixed; inset: 0; z-index: -1; pointer-event
 .ba input[type=range] { position: absolute; inset: auto 0 12px 0; width: 60%; margin: 0 auto; z-index: 4; accent-color: var(--cyan); }
 
 /* ---- timeline premium (processo) ---- */
-.timeline { position: relative; margin-top: var(--s-5); padding-left: 8px; }
-.timeline::before { content: ""; position: absolute; left: 19px; top: 8px; bottom: 8px; width: 2px; background: linear-gradient(180deg, var(--blue), var(--cyan), transparent); }
+.timeline { position: relative; margin-top: var(--s-5); padding-left: 8px; --tl-progress: 0; }
+.timeline::before { content: ""; position: absolute; left: 19px; top: 8px; bottom: 8px; width: 2px; background: var(--line-2); }
+.timeline::after {
+  content: ""; position: absolute; left: 19px; top: 8px; width: 2px;
+  height: calc(var(--tl-progress, 0) * (100% - 16px));
+  background: linear-gradient(180deg, var(--blue), var(--cyan));
+  box-shadow: 0 0 10px color-mix(in srgb, var(--blue) 60%, transparent);
+  transition: height 0.1s linear;
+}
 .tl-item { position: relative; padding: 0 0 var(--s-4) 56px; }
 .tl-item:last-child { padding-bottom: 0; }
-.tl-dot { position: absolute; left: 8px; top: 2px; width: 24px; height: 24px; border-radius: 50%; background: var(--bg); border: 2px solid var(--blue-2); display: grid; place-items: center; box-shadow: 0 0 0 4px color-mix(in srgb, var(--blue) 18%, transparent); }
-.tl-dot svg { width: 12px; height: 12px; color: var(--blue-2); }
+.tl-dot { position: absolute; left: 8px; top: 2px; width: 24px; height: 24px; border-radius: 50%; background: var(--bg); border: 2px solid var(--line-2); display: grid; place-items: center; box-shadow: none; transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease); }
+.tl-dot svg { width: 12px; height: 12px; color: var(--ink-dim); transition: color 0.3s var(--ease); }
+.tl-item--done .tl-dot { border-color: var(--blue-2); box-shadow: 0 0 0 4px color-mix(in srgb, var(--blue) 18%, transparent); }
+.tl-item--done .tl-dot svg { color: var(--blue-2); }
 .tl-item h3 { font-family: var(--font-display); font-size: 18px; }
 .tl-item p { color: var(--ink-soft); font-size: 14px; margin-top: 4px; max-width: 56ch; }
 .tl-item .n { font-family: var(--font-mono); font-size: 11px; color: var(--blue-2); letter-spacing: 0.2em; }
