@@ -12,7 +12,7 @@ function readInitialTheme(): Theme {
   } catch {
     /* localStorage indisponível (modo privado etc.) */
   }
-  return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark"
+  return "dark"
 }
 
 function applyTheme(theme: Theme) {
