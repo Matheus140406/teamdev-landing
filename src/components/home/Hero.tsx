@@ -75,7 +75,7 @@ export default function Hero() {
           <div className="mock" id="heroMock" ref={mockRef}>
             <img
               className="mock-img"
-              src="/assets/img/Gemini_Generated_Image_5fy9jf5fy9jf5fy9.jpg"
+              src="/assets/img/hero-mockup.png"
               alt={t("hero.mockAlt", "Dev Team Tech")}
               loading="eager"
             />

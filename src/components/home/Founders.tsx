@@ -9,6 +9,7 @@ const FOUNDERS = [
   { href: "matheus.html", img: "/assets/img/matheus.webp", name: "Matheus Carvalho Dias", roleKey: "about.role", rolePt: "COFUNDADOR · DEV", tags: ["Full-stack", "IA", "Sistemas"], alt: "Matheus Carvalho Dias, cofundador da Dev Team Tech" },
   { href: "eduardo.html", img: "/assets/img/eduardo.webp", name: "Eduardo Vilanova", roleKey: "about.role", rolePt: "COFUNDADOR · DEV", tags: ["Front-end", "Design", "UX"], alt: "Eduardo Vilanova, cofundador da Dev Team Tech" },
   { href: "daniel.html", img: "/assets/img/daniel.webp", name: "Daniel", roleKey: "about.role2", rolePt: "MARKETING · QA", tags: ["Marketing", "QA", "Testes"], alt: "Daniel, marketing e QA da Dev Team Tech" },
+  { href: "#contato", img: "/assets/img/gabriel.jpeg", name: "Gabriel", roleKey: "about.role3", rolePt: "MARKETING · FOTO E VÍDEO", tags: ["Fotografia", "Vídeo", "Conteúdo"], alt: "Gabriel, marketing, foto e vídeo da Dev Team Tech" },
 ]
 
 export default function Founders() {
