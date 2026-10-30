@@ -1,7 +1,8 @@
 {
-  "name": "figma-make-app",
+  "name": "teamdev-landing",
   "private": true,
   "version": "1.0.0",
+  "description": "Site institucional da Dev Team Tech",
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
