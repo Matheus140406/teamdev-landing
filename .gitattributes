@@ -164,3 +164,5 @@ src/imports/project-imobiliaria.jpg -filter -diff -merge -text
 src/imports/project-hpt.jpg -filter -diff -merge -text
 src/imports/project-dinedrop-landing.jpg -filter -diff -merge -text
 src/imports/project-analisecorporal.jpg -filter -diff -merge -text
+src/imports/cover-dinedrop.jpg -filter -diff -merge -text
+src/imports/cover-imobiliaria.jpg -filter -diff -merge -text

@@ -2,8 +2,8 @@ import gabrielPhoto from "./imports/gabriel.jpeg"
 import matheusPhoto from "./imports/matheus-novo.jpg"
 import eduardoPhoto from "./imports/eduardo.webp"
 import danielPhoto from "./imports/daniel.webp"
-import dinedropAppImage from "./imports/project-dinedrop-app.jpg"
-import imobiliariaImage from "./imports/project-imobiliaria.jpg"
+import dinedropAppImage from "./imports/cover-dinedrop.jpg"
+import imobiliariaImage from "./imports/cover-imobiliaria.jpg"
 import hptImage from "./imports/project-hpt.jpg"
 import dinedropLandingImage from "./imports/project-dinedrop-landing.jpg"
 import analiseCorporalImage from "./imports/project-analisecorporal.jpg"
@@ -127,7 +127,7 @@ const pt = {
   payTitle1: "Metade para começar.",
   payTitle2: "Metade na entrega.",
   payIntro:
-    "Sem mensalidade escondida, sem taxa surpresa no fim. O valor fechado na proposta é o valor do projeto. Domínio e projetos de gestão têm mensalidade à parte, sempre informada antes de fechar.",
+    "O valor do projeto varia com a demanda e a complexidade, pode mudar com o tempo, e já inclui marketing — sem taxa surpresa no fim. Domínio e projetos de gestão têm mensalidade à parte, sempre informada antes de fechar.",
   payStartLabel: "Para começar",
   payStartText:
     "Pago após a aprovação da proposta. É o que reserva seu lugar na agenda.",
@@ -319,7 +319,7 @@ const es: Copy = {
   payTitle1: "Mitad para empezar.",
   payTitle2: "Mitad al entregar.",
   payIntro:
-    "Sin cuotas ocultas ni cargos sorpresa al final. El valor cerrado en la propuesta es el valor del proyecto. El dominio y los proyectos de gestión tienen una cuota mensual aparte, siempre informada antes de cerrar.",
+    "El valor del proyecto varía según la demanda y la complejidad, puede cambiar con el tiempo, e incluye marketing — sin cargos sorpresa al final. El dominio y los proyectos de gestión tienen una cuota mensual aparte, siempre informada antes de cerrar.",
   payStartLabel: "Para empezar",
   payStartText:
     "Se paga al aprobar la propuesta. Es lo que reserva tu lugar en la agenda.",
@@ -508,7 +508,7 @@ const en: Copy = {
   payTitle1: "Half to start.",
   payTitle2: "Half on delivery.",
   payIntro:
-    "No hidden monthly fees, no surprise charges at the end. The price in the proposal is the price of the project. Domains and management-type projects do carry a separate monthly fee, always disclosed before you commit.",
+    "The project's price varies with demand and complexity, can change over time, and already includes marketing — no surprise charges at the end. Domains and management-type projects do carry a separate monthly fee, always disclosed before you commit.",
   payStartLabel: "To start",
   payStartText:
     "Paid once you approve the proposal. It locks in your spot on our calendar.",
