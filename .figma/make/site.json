@@ -2,6 +2,9 @@
   "title": "Dev Team Tech — Sites, Apps e Landing Pages",
   "description": "Agência de desenvolvimento web em Brasília. Sites, apps e landing pages com design, código, QA e suporte pós-entrega.",
   "language": "pt-BR",
+  "icons": {
+    "icon": "/favicon.svg"
+  },
   "robots": {
     "index": true
   },

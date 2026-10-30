@@ -1123,11 +1123,18 @@ function ProcessPage() {
 
 function Faq() {
   const { lang } = useSite()
-  const [open, setOpen] = useState<number | null>(0)
+  const [open, setOpen] = useState<Set<number>>(() => new Set([0]))
+  const toggle = (index: number) =>
+    setOpen((current) => {
+      const next = new Set(current)
+      if (next.has(index)) next.delete(index)
+      else next.add(index)
+      return next
+    })
   return (
     <div className="faq-list" data-stagger>
       {FAQS.map((item, index) => {
-        const isOpen = open === index
+        const isOpen = open.has(index)
         return (
           <div
             className={`faq-item ${isOpen ? "is-open" : ""}`}
@@ -1141,7 +1148,7 @@ function Faq() {
                 id={`faq-q-${index}`}
                 aria-expanded={isOpen}
                 aria-controls={`faq-a-${index}`}
-                onClick={() => setOpen(isOpen ? null : index)}
+                onClick={() => toggle(index)}
               >
                 <span className="faq-num">{pad(index + 1)}</span>
                 <span className="faq-q">{item.q[lang]}</span>
@@ -1764,9 +1771,6 @@ function TeamDialog({
   const total = TEAM.length
   const previous = (current - 1 + total) % total
   const next = (current + 1) % total
-  const related = PROJECTS.filter((project) =>
-    member.related.includes(project.id),
-  )
 
   useEffect(() => {
     if (index === null) return
@@ -1853,36 +1857,6 @@ function TeamDialog({
                 </li>
               ))}
             </ol>
-          </section>
-          <section
-            className="member-section member-swap"
-            style={cssVars({ "--d": 4 })}
-          >
-            <h3 className="meta-label">{t.relatedWork}</h3>
-            <div className="member-related">
-              {related.map((project) => (
-                <button
-                  type="button"
-                  key={project.id}
-                  className="related-card"
-                  data-cursor="view"
-                  onClick={() => onOpenProject(project.id)}
-                >
-                  <span className="related-media">
-                    <img
-                      src={project.image}
-                      alt=""
-                      width={1400}
-                      height={1000}
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </span>
-                  <span className="related-name">{project.name}</span>
-                  <span className="related-type">{project.type[lang]}</span>
-                </button>
-              ))}
-            </div>
           </section>
         </div>
       </div>

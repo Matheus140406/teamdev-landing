@@ -1,4 +1,7 @@
 import gabrielPhoto from "./imports/gabriel.jpeg"
+import matheusPhoto from "./imports/matheus.webp"
+import eduardoPhoto from "./imports/eduardo.webp"
+import danielPhoto from "./imports/daniel.webp"
 
 export type Lang = "pt" | "es" | "en"
 export type Localized = Record<Lang, string>
@@ -118,7 +121,7 @@ const pt = {
   payTitle1: "Metade para começar.",
   payTitle2: "Metade na entrega.",
   payIntro:
-    "Sem mensalidade escondida, sem taxa surpresa no fim. O valor fechado na proposta é o valor do projeto.",
+    "Sem mensalidade escondida, sem taxa surpresa no fim. O valor fechado na proposta é o valor do projeto. Domínio e projetos de gestão têm mensalidade à parte, sempre informada antes de fechar.",
   payStartLabel: "Para começar",
   payStartText:
     "Pago após a aprovação da proposta. É o que reserva seu lugar na agenda.",
@@ -309,7 +312,7 @@ const es: Copy = {
   payTitle1: "Mitad para empezar.",
   payTitle2: "Mitad al entregar.",
   payIntro:
-    "Sin cuotas ocultas ni cargos sorpresa al final. El valor cerrado en la propuesta es el valor del proyecto.",
+    "Sin cuotas ocultas ni cargos sorpresa al final. El valor cerrado en la propuesta es el valor del proyecto. El dominio y los proyectos de gestión tienen una cuota mensual aparte, siempre informada antes de cerrar.",
   payStartLabel: "Para empezar",
   payStartText:
     "Se paga al aprobar la propuesta. Es lo que reserva tu lugar en la agenda.",
@@ -497,7 +500,7 @@ const en: Copy = {
   payTitle1: "Half to start.",
   payTitle2: "Half on delivery.",
   payIntro:
-    "No hidden monthly fees, no surprise charges at the end. The price in the proposal is the price of the project.",
+    "No hidden monthly fees, no surprise charges at the end. The price in the proposal is the price of the project. Domains and management-type projects do carry a separate monthly fee, always disclosed before you commit.",
   payStartLabel: "To start",
   payStartText:
     "Paid once you approve the proposal. It locks in your spot on our calendar.",
@@ -1011,6 +1014,7 @@ export const TEAM: Member[] = [
     name: "Matheus",
     fullName: "Matheus Carvalho",
     initials: "MC",
+    photo: matheusPhoto,
     role: { pt: "Fundador & CEO", es: "Fundador y CEO", en: "Founder & CEO" },
     focus: {
       pt: "Visão, atendimento e estratégia",
@@ -1049,6 +1053,7 @@ export const TEAM: Member[] = [
     name: "Edu",
     fullName: "Eduardo Vilanova",
     initials: "EV",
+    photo: eduardoPhoto,
     role: { pt: "CEO & Sócio", es: "CEO y socio", en: "CEO & Partner" },
     focus: {
       pt: "Gestão e desenvolvimento",
@@ -1087,6 +1092,7 @@ export const TEAM: Member[] = [
     name: "Daniel",
     fullName: "Daniel",
     initials: "DN",
+    photo: danielPhoto,
     role: { pt: "QA · Qualidade", es: "QA · Calidad", en: "QA · Quality" },
     focus: {
       pt: "Testes antes de cada entrega",

@@ -149,3 +149,6 @@
 # (this environment cannot reach GitHub's LFS storage endpoint to upload)
 src/imports/gabriel.jpeg -filter -diff -merge -text
 src/imports/image.png -filter -diff -merge -text
+src/imports/matheus.webp -filter -diff -merge -text
+src/imports/eduardo.webp -filter -diff -merge -text
+src/imports/daniel.webp -filter -diff -merge -text
