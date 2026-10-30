@@ -20,8 +20,8 @@ export const CONTACT = {
   whatsapp: "556192355047",
   whatsappLabel: "+55 61 9235-5047",
   email: "devteam2026tech@gmail.com",
-  instagram: "https://instagram.com/devteamtech",
-  instagramLabel: "@devteamtech",
+  instagram: "https://www.instagram.com/teamdevmatheus/",
+  instagramLabel: "@teamdevmatheus",
   github: "https://github.com/Matheus140406",
   githubLabel: "github.com/Matheus140406",
 }
