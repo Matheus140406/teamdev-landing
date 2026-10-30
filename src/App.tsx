@@ -732,11 +732,18 @@ function HomePage() {
 
 function ServicesPage() {
   const { t, lang } = useSite()
-  const [active, setActive] = useState<number | null>(0)
+  const [open, setOpen] = useState<Set<number>>(() => new Set([0]))
   const hoverCapable = useRef(
     typeof window !== "undefined" &&
       window.matchMedia("(hover: hover)").matches,
   )
+  const toggle = (index: number) =>
+    setOpen((current) => {
+      const next = new Set(current)
+      if (next.has(index)) next.delete(index)
+      else next.add(index)
+      return next
+    })
   return (
     <>
       <PageHero
@@ -749,23 +756,24 @@ function ServicesPage() {
         <div className="container">
           <ol className="service-list" data-stagger>
             {SERVICES.map((service, index) => {
-              const open = active === index
+              const isOpen = open.has(index)
               return (
                 <li
                   key={service.title.en}
-                  className={`service-row ${open ? "is-open" : ""}`}
+                  className={`service-row ${isOpen ? "is-open" : ""}`}
                   data-reveal
-                  onMouseEnter={() => hoverCapable.current && setActive(index)}
+                  onMouseEnter={() =>
+                    hoverCapable.current &&
+                    setOpen((current) => new Set(current).add(index))
+                  }
                 >
                   <h2 className="service-heading">
                     <button
                       type="button"
                       className="service-head"
-                      aria-expanded={open}
+                      aria-expanded={isOpen}
                       aria-controls={`service-${index}`}
-                      onClick={() =>
-                        setActive(open && !hoverCapable.current ? null : index)
-                      }
+                      onClick={() => toggle(index)}
                     >
                       <span className="service-num">{pad(index + 1)}</span>
                       <span className="service-title">
@@ -781,7 +789,7 @@ function ServicesPage() {
                   <div
                     className="service-panel"
                     id={`service-${index}`}
-                    inert={!open}
+                    inert={!isOpen}
                   >
                     <div className="collapse-inner">
                       <div className="service-content">
@@ -1934,7 +1942,14 @@ function ProjectDialog({
               </dd>
             </div>
           </dl>
-          <Button onClick={onContact}>{t.projectCta}</Button>
+          <div className="project-detail-actions">
+            {project.url && (
+              <Button href={project.url} external variant="ghost">
+                {t.visitSite}
+              </Button>
+            )}
+            <Button onClick={onContact}>{t.projectCta}</Button>
+          </div>
         </div>
       </div>
     </Dialog>

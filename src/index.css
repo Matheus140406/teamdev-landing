@@ -2889,6 +2889,12 @@ html.menu-open .topbar {
   color: var(--text-soft);
 }
 
+.project-detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
 .tag-list {
   display: flex;
   flex-wrap: wrap;

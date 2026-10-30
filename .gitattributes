@@ -152,3 +152,15 @@ src/imports/image.png -filter -diff -merge -text
 src/imports/matheus.webp -filter -diff -merge -text
 src/imports/eduardo.webp -filter -diff -merge -text
 src/imports/daniel.webp -filter -diff -merge -text
+public/apple-touch-icon.png -filter -diff -merge -text
+public/favicon-16.png -filter -diff -merge -text
+public/favicon-32.png -filter -diff -merge -text
+public/favicon.ico -filter -diff -merge -text
+public/icon-192.png -filter -diff -merge -text
+public/icon-512.png -filter -diff -merge -text
+src/imports/matheus-novo.jpg -filter -diff -merge -text
+src/imports/project-dinedrop-app.jpg -filter -diff -merge -text
+src/imports/project-imobiliaria.jpg -filter -diff -merge -text
+src/imports/project-hpt.jpg -filter -diff -merge -text
+src/imports/project-dinedrop-landing.jpg -filter -diff -merge -text
+src/imports/project-analisecorporal.jpg -filter -diff -merge -text

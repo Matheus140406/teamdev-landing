@@ -13,6 +13,6 @@
     "ignoreReducedMotion": false
   },
   "customScripts": {
-    "headEnd": "<meta name=\"theme-color\" content=\"#06040c\"><meta property=\"og:type\" content=\"website\"><meta property=\"og:locale\" content=\"pt_BR\"><meta name=\"twitter:card\" content=\"summary_large_image\"><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"Dev Team Tech\",\"email\":\"devteam2026tech@gmail.com\",\"areaServed\":\"Worldwide\",\"knowsAbout\":[\"Web Development\",\"Landing Pages\",\"Web Applications\",\"Quality Assurance\"]}</script>"
+    "headEnd": "<meta name=\"theme-color\" content=\"#06040c\"><meta property=\"og:type\" content=\"website\"><meta property=\"og:locale\" content=\"pt_BR\"><meta name=\"twitter:card\" content=\"summary_large_image\"><link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-32.png\"><link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-16.png\"><link rel=\"shortcut icon\" href=\"/favicon.ico\"><link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/apple-touch-icon.png\"><link rel=\"manifest\" href=\"/site.webmanifest\"><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"Dev Team Tech\",\"email\":\"devteam2026tech@gmail.com\",\"areaServed\":\"Worldwide\",\"knowsAbout\":[\"Web Development\",\"Landing Pages\",\"Web Applications\",\"Quality Assurance\"]}</script>"
   }
 }

@@ -1,7 +1,12 @@
 import gabrielPhoto from "./imports/gabriel.jpeg"
-import matheusPhoto from "./imports/matheus.webp"
+import matheusPhoto from "./imports/matheus-novo.jpg"
 import eduardoPhoto from "./imports/eduardo.webp"
 import danielPhoto from "./imports/daniel.webp"
+import dinedropAppImage from "./imports/project-dinedrop-app.jpg"
+import imobiliariaImage from "./imports/project-imobiliaria.jpg"
+import hptImage from "./imports/project-hpt.jpg"
+import dinedropLandingImage from "./imports/project-dinedrop-landing.jpg"
+import analiseCorporalImage from "./imports/project-analisecorporal.jpg"
 
 export type Lang = "pt" | "es" | "en"
 export type Localized = Record<Lang, string>
@@ -103,6 +108,7 @@ const pt = {
   solution: "Solução",
   stack: "Tecnologias",
   outcome: "Resultado",
+  visitSite: "Ver site",
   projectCta: "Quero algo nessa linha",
   teamTitle1: "Quatro pessoas.",
   teamTitle2: "Nenhum repasse.",
@@ -294,6 +300,7 @@ const es: Copy = {
   solution: "Solución",
   stack: "Tecnologías",
   outcome: "Resultado",
+  visitSite: "Ver sitio",
   projectCta: "Quiero algo así",
   teamTitle1: "Cuatro personas.",
   teamTitle2: "Ningún intermediario.",
@@ -482,6 +489,7 @@ const en: Copy = {
   solution: "Solution",
   stack: "Stack",
   outcome: "Outcome",
+  visitSite: "Visit site",
   projectCta: "I want something like this",
   teamTitle1: "Four people.",
   teamTitle2: "Zero handoffs.",
@@ -819,6 +827,7 @@ export type Project = {
   category: Category
   year: string
   image: string
+  url?: string
   type: Localized
   challenge: Localized
   solution: Localized
@@ -828,170 +837,149 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
-    id: "aroma",
-    name: "Aroma & Sabor",
-    category: "landing",
-    year: "2025",
-    image:
-      "https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1400&q=80",
-    type: { pt: "Cafeteria", es: "Cafetería", en: "Coffee shop" },
-    challenge: {
-      pt: "O cardápio vivia em PDF e as reservas chegavam bagunçadas pelo direct.",
-      es: "El menú vivía en PDF y las reservas llegaban desordenadas por mensajes directos.",
-      en: "The menu lived in a PDF and bookings arrived as messy direct messages.",
-    },
-    solution: {
-      pt: "Landing page com cardápio navegável, fotos do espaço e reserva direto pelo WhatsApp.",
-      es: "Landing page con menú navegable, fotos del local y reserva directa por WhatsApp.",
-      en: "A landing page with a browsable menu, photos of the space and booking straight through WhatsApp.",
-    },
-    result: {
-      pt: "Reservas chegando com data e horário já definidos.",
-      es: "Reservas que llegan con fecha y hora definidas.",
-      en: "Bookings now arrive with date and time already set.",
-    },
-    tech: ["HTML", "CSS", "JavaScript"],
-  },
-  {
-    id: "ronaldo",
-    name: "Ronaldo Refrigeração",
-    category: "sites",
-    year: "2025",
-    image:
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1400&q=80",
-    type: { pt: "Climatização", es: "Climatización", en: "HVAC services" },
-    challenge: {
-      pt: "Clientes ligavam sem saber se o serviço atendia a região ou o tipo de aparelho.",
-      es: "Los clientes llamaban sin saber si el servicio cubría su zona o su tipo de equipo.",
-      en: "Customers called without knowing if the service covered their area or their unit.",
-    },
-    solution: {
-      pt: "Site de serviços com páginas por tipo de atendimento, área de cobertura e orçamento rápido.",
-      es: "Sitio de servicios con páginas por tipo de atención, zona de cobertura y presupuesto rápido.",
-      en: "A service site with pages per job type, coverage area and a quick quote request.",
-    },
-    result: {
-      pt: "Pedidos de orçamento mais completos e menos ligações perdidas.",
-      es: "Pedidos de presupuesto más completos y menos llamadas perdidas.",
-      en: "More complete quote requests and fewer missed calls.",
-    },
-    tech: ["HTML", "Tailwind CSS", "JavaScript"],
-  },
-  {
-    id: "core",
-    name: "Painel Core",
+    id: "dinedrop-app",
+    name: "DineDrop",
     category: "apps",
     year: "2026",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=80",
+    image: dinedropAppImage,
+    url: "https://dinedrop-app.vercel.app",
     type: {
-      pt: "Dashboard de gestão",
-      es: "Dashboard de gestión",
-      en: "Management dashboard",
+      pt: "Sistema para restaurantes",
+      es: "Sistema para restaurantes",
+      en: "Restaurant management system",
     },
     challenge: {
-      pt: "Indicadores espalhados em cinco planilhas diferentes, atualizadas à mão.",
-      es: "Indicadores repartidos en cinco planillas distintas, actualizadas a mano.",
-      en: "Key numbers spread across five spreadsheets, updated by hand.",
+      pt: "Cardápio, pedidos e entregas espalhados entre papel, WhatsApp e plataformas de terceiros com comissão por pedido.",
+      es: "Menú, pedidos y entregas repartidos entre papel, WhatsApp y plataformas de terceros con comisión por pedido.",
+      en: "Menu, orders and deliveries scattered across paper, WhatsApp and third-party platforms that charge a commission per order.",
     },
     solution: {
-      pt: "Um painel web com os números que importam, atualizados automaticamente.",
-      es: "Un panel web con los números que importan, actualizados automáticamente.",
-      en: "A web dashboard with the numbers that matter, updated automatically.",
+      pt: "Painel completo com cardápio digital por QR Code, pedidos em tempo real, mesas, entregas e cupons — mensalidade fixa, sem comissão.",
+      es: "Panel completo con menú digital por QR Code, pedidos en tiempo real, mesas, entregas y cupones — cuota fija, sin comisión.",
+      en: "A full dashboard with a QR-code digital menu, real-time orders, tables, deliveries and coupons — flat monthly fee, no commission.",
     },
     result: {
-      pt: "A reunião semanal passou a começar pelos dados, não pela busca deles.",
-      es: "La reunión semanal empieza por los datos, no por buscarlos.",
-      en: "The weekly meeting now starts with the data instead of hunting for it.",
+      pt: "Restaurante com visão ao vivo de pedidos, mesas ocupadas e entregas em um só painel.",
+      es: "Restaurante con visión en vivo de pedidos, mesas ocupadas y entregas en un solo panel.",
+      en: "The restaurant now sees orders, occupied tables and deliveries live, in one dashboard.",
     },
-    tech: ["React", "TypeScript", "Node.js"],
+    tech: ["React", "TypeScript", "Supabase"],
   },
   {
-    id: "forma",
-    name: "Forma Arquitetura",
-    category: "sites",
-    year: "2026",
-    image:
-      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=80",
-    type: {
-      pt: "Estúdio de arquitetura",
-      es: "Estudio de arquitectura",
-      en: "Architecture studio",
-    },
-    challenge: {
-      pt: "Portfólio bonito no Instagram, mas nenhum lugar para contar o processo.",
-      es: "Un portafolio bonito en Instagram, pero sin lugar para contar el proceso.",
-      en: "A beautiful Instagram feed, but nowhere to explain the process.",
-    },
-    solution: {
-      pt: "Site editorial com projetos em detalhe, fotos produzidas pelo Gabriel e contato qualificado.",
-      es: "Sitio editorial con proyectos en detalle, fotos de Gabriel y contacto calificado.",
-      en: "An editorial site with detailed projects, photos shot by Gabriel and a qualified contact form.",
-    },
-    result: {
-      pt: "Contatos chegando com orçamento e tipo de obra já definidos.",
-      es: "Contactos que llegan con presupuesto y tipo de obra definidos.",
-      en: "Leads now arrive with budget and project type already defined.",
-    },
-    tech: ["React", "Vite", "CMS"],
-  },
-  {
-    id: "pulse",
-    name: "Pulse Studio",
+    id: "imobiliaria",
+    name: "BS Imobiliária",
     category: "apps",
     year: "2026",
-    image:
-      "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=80",
+    image: imobiliariaImage,
+    url: "https://controle-imobiliario.vercel.app",
     type: {
-      pt: "App de agendamento",
-      es: "App de reservas",
-      en: "Booking app",
+      pt: "Gestão imobiliária",
+      es: "Gestión inmobiliaria",
+      en: "Real estate management",
     },
     challenge: {
-      pt: "Aulas marcadas por mensagem e lista de espera no papel.",
-      es: "Clases reservadas por mensaje y lista de espera en papel.",
-      en: "Classes booked over text and a waiting list on paper.",
+      pt: "Contratos, aluguéis e inadimplência controlados manualmente, sem visão única do financeiro.",
+      es: "Contratos, alquileres y morosidad controlados a mano, sin una vista única del financiero.",
+      en: "Contracts, rent and overdue payments tracked by hand, with no single view of the finances.",
     },
     solution: {
-      pt: "App web com grade de horários, check-in e lembretes automáticos.",
-      es: "App web con horarios, check-in y recordatorios automáticos.",
-      en: "A web app with a class schedule, check-in and automatic reminders.",
+      pt: "Dashboard com contratos, imóveis, financeiro e fila de atraso, com baixa manual e sincronização automática.",
+      es: "Dashboard con contratos, inmuebles, financiero y cola de atraso, con baja manual y sincronización automática.",
+      en: "A dashboard with contracts, properties, finances and an overdue-payments queue, with manual write-off and automatic sync.",
     },
     result: {
-      pt: "Agenda organizada e menos faltas sem aviso.",
-      es: "Agenda ordenada y menos ausencias sin aviso.",
-      en: "An organized calendar and fewer no-shows.",
+      pt: "Receita do mês, inadimplência e vencimentos próximos visíveis em um painel só.",
+      es: "Ingresos del mes, morosidad y próximos vencimientos visibles en un solo panel.",
+      en: "Monthly revenue, overdue accounts and upcoming due dates, all visible in one dashboard.",
     },
-    tech: ["React", "TypeScript", "PWA"],
+    tech: ["React", "TypeScript", "Supabase"],
   },
   {
-    id: "casa",
-    name: "Casa Viva",
+    id: "hpt",
+    name: "High-Performance Team",
     category: "landing",
     year: "2026",
-    image:
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1400&q=80",
+    image: hptImage,
+    url: "https://www.highperformanceteam.com.br",
     type: {
-      pt: "Lançamento imobiliário",
-      es: "Lanzamiento inmobiliario",
-      en: "Real estate launch",
+      pt: "Consultoria fitness online",
+      es: "Consultoría fitness online",
+      en: "Online fitness coaching",
     },
     challenge: {
-      pt: "Um lançamento com prazo curto e campanha paga já agendada.",
-      es: "Un lanzamiento con plazo corto y campaña pagada ya programada.",
-      en: "A launch on a tight deadline with paid ads already scheduled.",
+      pt: "Consultoria 100% online que precisava de uma presença com cara de resultado, não de perfil de rede social.",
+      es: "Consultoría 100% online que necesitaba una presencia con cara de resultado, no un perfil de red social.",
+      en: "A fully online coaching business that needed a presence that looked like results, not a social media profile.",
     },
     solution: {
-      pt: "Landing page rápida, com plantas, galeria e captação integrada ao corretor.",
-      es: "Landing page rápida con planos, galería y captación conectada al agente.",
-      en: "A fast landing page with floor plans, a gallery and lead capture routed to the agent.",
+      pt: "Landing page institucional com planos, equipe, FAQ e contato direto pelo WhatsApp.",
+      es: "Landing page institucional con planes, equipo, FAQ y contacto directo por WhatsApp.",
+      en: "An institutional landing page with plans, team, FAQ and direct WhatsApp contact.",
     },
     result: {
-      pt: "Página no ar antes da campanha e contatos direto no WhatsApp do time comercial.",
-      es: "Página publicada antes de la campaña y contactos directo al WhatsApp comercial.",
-      en: "Live before the campaign, with leads going straight to the sales team's WhatsApp.",
+      pt: "Site publicado com planos claros e canal de contato direto para fechar consultoria.",
+      es: "Sitio publicado con planes claros y canal de contacto directo para cerrar consultoría.",
+      en: "A live site with clear plans and a direct contact channel for closing new coaching clients.",
     },
-    tech: ["Next.js", "Tailwind CSS", "Analytics"],
+    tech: ["Next.js", "Tailwind CSS"],
+  },
+  {
+    id: "dinedrop-landing",
+    name: "DineDrop — Landing",
+    category: "landing",
+    year: "2026",
+    image: dinedropLandingImage,
+    url: "https://dinedrop-landing.vercel.app",
+    type: {
+      pt: "Landing page de SaaS",
+      es: "Landing page de SaaS",
+      en: "SaaS landing page",
+    },
+    challenge: {
+      pt: "Apresentar o DineDrop para donos de restaurante e deixar claro que não há comissão por pedido, só mensalidade fixa.",
+      es: "Presentar DineDrop a dueños de restaurantes y dejar claro que no hay comisión por pedido, solo cuota fija.",
+      en: "Introduce DineDrop to restaurant owners and make it clear there's no per-order commission, only a flat fee.",
+    },
+    solution: {
+      pt: "Landing page com vantagens, nichos atendidos, como funciona, planos e perguntas frequentes.",
+      es: "Landing page con ventajas, nichos atendidos, cómo funciona, planes y preguntas frecuentes.",
+      en: "A landing page covering benefits, served niches, how it works, plans and FAQs.",
+    },
+    result: {
+      pt: "Página pronta para captar restaurantes com teste grátis de 17 dias.",
+      es: "Página lista para captar restaurantes con prueba gratis de 17 días.",
+      en: "A page ready to bring in restaurants with a free 17-day trial.",
+    },
+    tech: ["React", "TypeScript", "Vite"],
+  },
+  {
+    id: "analise-corporal",
+    name: "Análise Corporal — Elisângela Jeane",
+    category: "landing",
+    year: "2026",
+    image: analiseCorporalImage,
+    url: "https://analisecorporal.vercel.app",
+    type: {
+      pt: "Página de profissional liberal",
+      es: "Página de profesional independiente",
+      en: "Independent professional's page",
+    },
+    challenge: {
+      pt: "Divulgar um método próprio de análise corporal e permitir o agendamento de consultas sem depender só das redes sociais.",
+      es: "Difundir un método propio de análisis corporal y permitir agendar consultas sin depender solo de las redes sociales.",
+      en: "Promote a personal body-analysis method and let clients book consultations without relying only on social media.",
+    },
+    solution: {
+      pt: "Site com método, como funciona, benefícios, depoimentos e botão de agendamento em destaque.",
+      es: "Sitio con método, cómo funciona, beneficios, testimonios y botón de agendamiento destacado.",
+      en: "A site covering the method, how it works, benefits, testimonials and a prominent booking button.",
+    },
+    result: {
+      pt: "Presença profissional no ar, com agendamento de consulta a um clique.",
+      es: "Presencia profesional publicada, con agendamiento de consulta a un clic.",
+      en: "A professional presence live online, with consultation booking one click away.",
+    },
+    tech: ["React", "TypeScript", "Vite"],
   },
 ]
 
@@ -1046,7 +1034,7 @@ export const TEAM: Member[] = [
         "Follows every step through delivery",
       ],
     },
-    related: ["aroma", "core"],
+    related: ["dinedrop-app", "dinedrop-landing"],
   },
   {
     id: "edu",
@@ -1085,7 +1073,7 @@ export const TEAM: Member[] = [
         "Handles launch, domain and hosting",
       ],
     },
-    related: ["ronaldo", "pulse"],
+    related: ["imobiliaria", "hpt"],
   },
   {
     id: "daniel",
@@ -1124,7 +1112,7 @@ export const TEAM: Member[] = [
         "Basic security and data protection",
       ],
     },
-    related: ["core", "pulse"],
+    related: ["hpt", "analise-corporal"],
   },
   {
     id: "gabriel",
@@ -1167,7 +1155,7 @@ export const TEAM: Member[] = [
         "Visual direction for every asset",
       ],
     },
-    related: ["forma", "aroma"],
+    related: ["dinedrop-landing", "analise-corporal"],
   },
 ]
 
