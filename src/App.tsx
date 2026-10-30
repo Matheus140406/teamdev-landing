@@ -760,7 +760,7 @@ function ServicesPage() {
               return (
                 <li
                   key={service.title.en}
-                  className={`service-row ${isOpen ? "is-open" : ""}`}
+                  className="service-row"
                   data-reveal
                   onMouseEnter={() =>
                     hoverCapable.current &&
@@ -1145,7 +1145,7 @@ function Faq() {
         const isOpen = open.has(index)
         return (
           <div
-            className={`faq-item ${isOpen ? "is-open" : ""}`}
+            className="faq-item"
             key={item.q.en}
             data-reveal
           >

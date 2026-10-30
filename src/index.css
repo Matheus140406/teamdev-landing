@@ -1554,7 +1554,7 @@ html.menu-open .topbar {
   transition: transform var(--dur-slow) var(--ease-out);
 }
 
-.service-row.is-open::after {
+.service-row:has([aria-expanded="true"])::after {
   transform: scaleX(1);
 }
 
@@ -1590,7 +1590,7 @@ html.menu-open .topbar {
     transform var(--dur-base) var(--ease-out);
 }
 
-.service-row.is-open .service-title {
+.service-row:has([aria-expanded="true"]) .service-title {
   color: var(--text);
   transform: translate3d(clamp(0px, 1.5vw, 20px), 0, 0);
 }
@@ -1623,7 +1623,8 @@ html.menu-open .topbar {
   transform: rotate(90deg);
 }
 
-.is-open .toggle-icon {
+.service-row:has([aria-expanded="true"]) .toggle-icon,
+.faq-item:has([aria-expanded="true"]) .toggle-icon {
   transform: rotate(45deg);
   color: var(--accent-soft);
 }
@@ -1635,8 +1636,8 @@ html.menu-open .topbar {
   transition: grid-template-rows var(--dur-slow) var(--ease-out);
 }
 
-.is-open > .service-panel,
-.is-open > .faq-panel {
+.service-row:has([aria-expanded="true"]) > .service-panel,
+.faq-item:has([aria-expanded="true"]) > .faq-panel {
   grid-template-rows: 1fr;
 }
 
@@ -1656,7 +1657,7 @@ html.menu-open .topbar {
     transform var(--dur-base) var(--ease-out);
 }
 
-.is-open .service-content {
+.service-row:has([aria-expanded="true"]) .service-content {
   opacity: 1;
   transform: none;
   transition-delay: 120ms;
@@ -2107,7 +2108,7 @@ html.menu-open .topbar {
   transition: opacity var(--dur-base) var(--ease-out);
 }
 
-.faq-item.is-open .collapse-inner p {
+.faq-item:has([aria-expanded="true"]) .collapse-inner p {
   opacity: 1;
   transition-delay: 100ms;
 }
@@ -3553,7 +3554,7 @@ html.menu-open .topbar {
 
   .tilt-card:hover,
   .page-index-link:hover .pi-title,
-  .service-row.is-open .service-title,
+  .service-row:has([aria-expanded="true"]) .service-title,
   .footer-cta:hover span,
   .footer-cta:hover svg {
     transform: none;
